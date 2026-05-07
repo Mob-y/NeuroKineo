@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { QUESTIONS } from '../../lib/questions'
+import { QUESTIONS } from '../lib/questions'
 import { useRouter } from 'next/navigation'
 
 export default function QuizPage() {
