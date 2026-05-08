@@ -1,360 +1,377 @@
 // NeuroKineo — Base de questions
 // ⚠️ À valider par un professionnel de santé kinésithérapeute
-// Structure : chapitre > niveau > tableau de questions
 
 export const QUESTIONS = {
-  osteologie: {
-    label: "Ostéologie",
-    emoji: "🦴",
-    description: "Étude des os et du squelette",
-    niveaux: {
-      1: [
-        {
-          id: "os_1_01",
-          question: "Combien d'os compose le squelette humain adulte ?",
-          reponses: ["186", "206", "226", "246"],
-          bonne_reponse: 1,
-          explication: "Le squelette humain adulte est composé de 206 os. À la naissance, le bébé en possède environ 270, qui fusionnent progressivement."
-        },
-        {
-          id: "os_1_02",
-          question: "Comment appelle-t-on la membrane fibreuse qui enveloppe les os ?",
-          reponses: ["L'endoste", "La diaphyse", "Le périoste", "L'épiphyse"],
-          bonne_reponse: 2,
-          explication: "Le périoste est la membrane conjonctive qui recouvre la surface externe des os. Il joue un rôle essentiel dans la nutrition et la croissance osseuse."
-        },
-        {
-          id: "os_1_03",
-          question: "Quelle est la partie centrale allongée d'un os long ?",
-          reponses: ["L'épiphyse", "Le périoste", "Le cartilage", "La diaphyse"],
-          bonne_reponse: 3,
-          explication: "La diaphyse est la partie centrale cylindrique des os longs. Elle est constituée d'os cortical dense et contient la cavité médullaire."
-        },
-        {
-          id: "os_1_04",
-          question: "Quel os forme la partie antérieure du thorax ?",
-          reponses: ["La clavicule", "Le sternum", "L'omoplate", "Le radius"],
-          bonne_reponse: 1,
-          explication: "Le sternum est un os plat situé à la partie antérieure du thorax. Il s'articule avec les côtes et la clavicule."
-        },
-        {
-          id: "os_1_05",
-          question: "Comment nomme-t-on les extrémités d'un os long ?",
-          reponses: ["Les diaphyses", "Les métaphyses", "Les épiphyses", "Les apophyses"],
-          bonne_reponse: 2,
-          explication: "Les épiphyses sont les deux extrémités élargies d'un os long, recouvertes de cartilage articulaire au niveau des articulations."
-        },
-        {
-          id: "os_1_06",
-          question: "Quel os est communément appelé 'rotule' ?",
-          reponses: ["Le talus", "La patella", "Le calcanéus", "Le cuboïde"],
-          bonne_reponse: 1,
-          explication: "La patella (ou rotule) est un os sésamoïde situé à la face antérieure du genou, enchâssé dans le tendon quadricipital."
-        },
-        {
-          id: "os_1_07",
-          question: "Combien de vertèbres composent la colonne vertébrale ?",
-          reponses: ["24", "31", "33", "36"],
-          bonne_reponse: 2,
-          explication: "La colonne vertébrale est composée de 33 vertèbres : 7 cervicales, 12 thoraciques, 5 lombaires, 5 sacrées (fusionnées) et 4 coccygiennes (fusionnées)."
-        },
-        {
-          id: "os_1_08",
-          question: "Quel est l'os le plus long du corps humain ?",
-          reponses: ["Le tibia", "L'humérus", "Le fémur", "Le radius"],
-          bonne_reponse: 2,
-          explication: "Le fémur est l'os le plus long et le plus solide du corps humain. Il constitue l'os de la cuisse et s'articule avec le bassin et le genou."
-        },
-        {
-          id: "os_1_09",
-          question: "Combien de côtes possède le corps humain ?",
-          reponses: ["10 paires", "11 paires", "12 paires", "13 paires"],
-          bonne_reponse: 2,
-          explication: "Le corps humain possède 12 paires de côtes (24 au total). Les 7 premières sont vraies (reliées au sternum), les 3 suivantes sont fausses et les 2 dernières sont flottantes."
-        },
-        {
-          id: "os_1_10",
-          question: "Quel os constitue la partie inférieure et postérieure du crâne ?",
-          reponses: ["L'os frontal", "L'os pariétal", "L'os occipital", "L'os temporal"],
-          bonne_reponse: 2,
-          explication: "L'os occipital forme la partie postéro-inférieure du crâne. Il contient le foramen magnum par lequel passe la moelle épinière."
-        }
-      ]
-    }
-  },
-
   myologie: {
-    label: "Myologie",
-    emoji: "💪",
-    description: "Étude des muscles",
-    niveaux: {
-      1: [
-        {
-          id: "my_1_01",
-          question: "Combien de muscles compose approximativement le corps humain ?",
-          reponses: ["Environ 200", "Environ 400", "Environ 600", "Environ 800"],
-          bonne_reponse: 2,
-          explication: "Le corps humain possède environ 600 muscles squelettiques. Ils représentent environ 40% du poids corporel chez l'homme et 35% chez la femme."
-        },
-        {
-          id: "my_1_02",
-          question: "Quelle protéine est responsable de la contraction musculaire avec la myosine ?",
-          reponses: ["La kératine", "L'actine", "La fibrine", "La tubuline"],
-          bonne_reponse: 1,
-          explication: "L'actine et la myosine sont les deux protéines contractiles essentielles du muscle. Leur interaction permet le glissement des filaments et la contraction musculaire."
-        },
-        {
-          id: "my_1_03",
-          question: "Comment appelle-t-on la gaine conjonctive qui entoure l'ensemble d'un muscle ?",
-          reponses: ["L'endomysium", "Le périmysium", "L'épimysium", "Le fascia"],
-          bonne_reponse: 2,
-          explication: "L'épimysium est la gaine conjonctive externe qui entoure l'ensemble du muscle. Le périmysium entoure les faisceaux et l'endomysium entoure chaque fibre musculaire."
-        },
-        {
-          id: "my_1_04",
-          question: "Quel est le muscle le plus puissant du corps humain ?",
-          reponses: ["Le biceps brachial", "Le quadriceps", "Le grand fessier", "Le soléaire"],
-          bonne_reponse: 2,
-          explication: "Le grand fessier (gluteus maximus) est considéré comme le muscle le plus puissant du corps. Il est essentiel pour l'extension de la hanche et le maintien de la posture érigée."
-        },
-        {
-          id: "my_1_05",
-          question: "Quel muscle est responsable de la flexion de l'avant-bras sur le bras ?",
-          reponses: ["Le triceps brachial", "Le deltoïde", "Le biceps brachial", "Le brachioradial"],
-          bonne_reponse: 2,
-          explication: "Le biceps brachial est le principal fléchisseur de l'avant-bras. Il est également supinateur de l'avant-bras et participe à la flexion de l'épaule."
-        },
-        {
-          id: "my_1_06",
-          question: "Comment appelle-t-on l'unité fonctionnelle de base du muscle strié ?",
-          reponses: ["La myofibrille", "Le sarcomère", "Le sarcoplasme", "Le réticulum"],
-          bonne_reponse: 1,
-          explication: "Le sarcomère est l'unité contractile de base du muscle strié squelettique. Il est délimité par deux stries Z et contient les filaments d'actine et de myosine."
-        },
-        {
-          id: "my_1_07",
-          question: "Quel muscle permet principalement l'extension du genou ?",
-          reponses: ["Les ischio-jambiers", "Le quadriceps fémoral", "Le soléaire", "Le poplité"],
-          bonne_reponse: 1,
-          explication: "Le quadriceps fémoral (composé du droit fémoral, vaste latéral, vaste médial et vaste intermédiaire) est le principal extenseur du genou."
-        },
-        {
-          id: "my_1_08",
-          question: "Quel type de muscle est sous contrôle involontaire ?",
-          reponses: ["Le muscle squelettique", "Le muscle strié", "Le muscle lisse", "Le muscle facial"],
-          bonne_reponse: 2,
-          explication: "Le muscle lisse est sous contrôle involontaire du système nerveux autonome. On le retrouve dans les parois des organes creux, des vaisseaux sanguins et du tube digestif."
-        },
-        {
-          id: "my_1_09",
-          question: "Quel muscle est le principal fléchisseur plantaire du pied ?",
-          reponses: ["Le tibial antérieur", "Le long péronier", "Le triceps sural", "L'extenseur commun"],
-          bonne_reponse: 2,
-          explication: "Le triceps sural (composé du gastrocnémien et du soléaire) est le principal fléchisseur plantaire. Il est essentiel pour la marche, la course et le saut."
-        },
-        {
-          id: "my_1_10",
-          question: "Comment nomme-t-on la jonction entre un nerf moteur et une fibre musculaire ?",
-          reponses: ["La synapse", "La plaque motrice", "Le nœud de Ranvier", "Le fuseau neuromusculaire"],
-          bonne_reponse: 1,
-          explication: "La plaque motrice (ou jonction neuromusculaire) est la zone de contact spécialisée entre le motoneurone et la fibre musculaire. C'est là que l'acétylcholine déclenche la contraction."
-        }
-      ]
+    label: "Myologie", emoji: "💪", description: "Étude des muscles",
+    regions: {
+      membre_sup: { label: "Membre supérieur", zones: {
+        epaule: { label: "Épaule", niveaux: { 1: [
+          { id: "my_ms_ep_01", question: "Quel muscle est le principal abducteur de l'épaule entre 0° et 90° ?", reponses: ["Grand pectoral","Deltoïde","Sus-épineux","Sous-scapulaire"], bonne_reponse: 1, explication: "Le deltoïde est le principal abducteur de l'épaule. Le sus-épineux initie le mouvement (0-15°) mais c'est le deltoïde qui prend le relais jusqu'à 90°." },
+          { id: "my_ms_ep_02", question: "Combien de muscles composent la coiffe des rotateurs ?", reponses: ["2","3","4","5"], bonne_reponse: 2, explication: "La coiffe des rotateurs est composée de 4 muscles : le sus-épineux, le sous-épineux, le petit rond et le sous-scapulaire." },
+          { id: "my_ms_ep_03", question: "Quel muscle de la coiffe des rotateurs est rotateur interne ?", reponses: ["Sus-épineux","Sous-épineux","Petit rond","Sous-scapulaire"], bonne_reponse: 3, explication: "Le sous-scapulaire est le seul rotateur interne de la coiffe des rotateurs. Il s'insère sur le tubercule mineur de l'humérus." },
+          { id: "my_ms_ep_04", question: "Quel muscle stabilise la scapula contre le thorax ?", reponses: ["Trapèze","Deltoïde","Grand dentelé","Rhomboïde"], bonne_reponse: 2, explication: "Le grand dentelé plaque la scapula contre le thorax. Sa paralysie provoque le signe du 'scapula alata'." },
+          { id: "my_ms_ep_05", question: "Quel nerf innerve le deltoïde ?", reponses: ["Nerf radial","Nerf axillaire","Nerf musculo-cutané","Nerf suprascapulaire"], bonne_reponse: 1, explication: "Le nerf axillaire (C5-C6) innerve le deltoïde et le petit rond." },
+          { id: "my_ms_ep_06", question: "Quel muscle réalise la rotation externe de l'épaule ?", reponses: ["Sous-scapulaire","Sus-épineux","Sous-épineux","Grand pectoral"], bonne_reponse: 2, explication: "Le sous-épineux et le petit rond sont les principaux rotateurs externes de l'épaule." },
+          { id: "my_ms_ep_07", question: "Quel muscle élève et bascule la scapula vers le haut ?", reponses: ["Rhomboïde","Grand dentelé","Trapèze supérieur","Élévateur de la scapula"], bonne_reponse: 2, explication: "Le trapèze supérieur élève la scapula et la fait basculer vers le haut." },
+          { id: "my_ms_ep_08", question: "Quel muscle réalise l'antépulsion du bras ?", reponses: ["Faisceau postérieur du deltoïde","Faisceau antérieur du deltoïde","Sous-épineux","Grand rond"], bonne_reponse: 1, explication: "Le faisceau antérieur du deltoïde réalise la flexion (antépulsion) du bras." },
+          { id: "my_ms_ep_09", question: "Quel tendon passe dans l'espace sous-acromial ?", reponses: ["Tendon du sous-scapulaire","Tendon du sus-épineux","Tendon du biceps chef long","Tendon du grand rond"], bonne_reponse: 1, explication: "Le tendon du sus-épineux passe dans l'espace sous-acromial. C'est la structure la plus souvent impliquée dans le conflit sous-acromial." },
+          { id: "my_ms_ep_10", question: "Quel muscle permet l'adduction et la rotation interne du bras ?", reponses: ["Deltoïde","Grand dorsal","Sus-épineux","Petit rond"], bonne_reponse: 1, explication: "Le grand dorsal réalise l'adduction, la rotation interne et l'extension du bras." }
+        ]}},
+        coude: { label: "Coude", niveaux: { 1: [
+          { id: "my_ms_co_01", question: "Quel muscle est le principal fléchisseur du coude ?", reponses: ["Brachial","Biceps brachial","Brachio-radial","Rond pronateur"], bonne_reponse: 1, explication: "Le biceps brachial est le principal fléchisseur du coude, surtout en supination." },
+          { id: "my_ms_co_02", question: "Quel muscle réalise l'extension du coude ?", reponses: ["Biceps brachial","Brachial","Triceps brachial","Anconé"], bonne_reponse: 2, explication: "Le triceps brachial est le seul extenseur du coude. Il est composé de 3 chefs : long, latéral et médial." },
+          { id: "my_ms_co_03", question: "Quel nerf innerve le biceps brachial ?", reponses: ["Nerf radial","Nerf médian","Nerf musculo-cutané","Nerf ulnaire"], bonne_reponse: 2, explication: "Le nerf musculo-cutané (C5-C6) innerve le biceps brachial, le brachial et le coracobrachial." },
+          { id: "my_ms_co_04", question: "Quel muscle réalise la supination de l'avant-bras avec le biceps ?", reponses: ["Rond pronateur","Carré pronateur","Supinateur","Brachio-radial"], bonne_reponse: 2, explication: "Le supinateur (court supinateur) réalise la supination de l'avant-bras." },
+          { id: "my_ms_co_05", question: "Quel muscle réalise la pronation de l'avant-bras ?", reponses: ["Supinateur","Biceps brachial","Rond pronateur","Brachio-radial"], bonne_reponse: 2, explication: "Le rond pronateur et le carré pronateur réalisent la pronation de l'avant-bras." },
+          { id: "my_ms_co_06", question: "À quel niveau s'insère le tendon commun des épicondyliens latéraux ?", reponses: ["Épicondyle médial","Épicondyle latéral","Olécrâne","Tête radiale"], bonne_reponse: 1, explication: "Les muscles épicondyliens latéraux s'insèrent sur l'épicondyle latéral. Leur inflammation cause l'épicondylite latérale (tennis elbow)." },
+          { id: "my_ms_co_07", question: "Quel nerf peut être comprimé dans le tunnel cubital au coude ?", reponses: ["Nerf médian","Nerf radial","Nerf ulnaire","Nerf musculo-cutané"], bonne_reponse: 2, explication: "Le nerf ulnaire passe dans le tunnel cubital au niveau du coude." },
+          { id: "my_ms_co_08", question: "Quel muscle fléchit le coude et est innervé par le nerf radial ?", reponses: ["Biceps brachial","Brachial","Brachio-radial","Anconé"], bonne_reponse: 2, explication: "Le brachio-radial est un fléchisseur du coude innervé par le nerf radial (C5-C6)." },
+          { id: "my_ms_co_09", question: "Quel muscle réalise la pronation puissante de l'avant-bras ?", reponses: ["Supinateur","Biceps brachial","Carré pronateur","Rond pronateur"], bonne_reponse: 3, explication: "Le rond pronateur est le plus puissant des pronateurs de l'avant-bras." },
+          { id: "my_ms_co_10", question: "Quel muscle constitue le plancher de la fosse cubitale ?", reponses: ["Biceps brachial","Brachial","Supinateur","Rond pronateur"], bonne_reponse: 1, explication: "Le brachial constitue le plancher de la fosse cubitale." }
+        ]}},
+        main_poignet: { label: "Main / Poignet", niveaux: { 1: [
+          { id: "my_ms_mp_01", question: "Quel muscle permet l'opposition du pouce ?", reponses: ["Abducteur court du pouce","Opposant du pouce","Adducteur du pouce","Fléchisseur long du pouce"], bonne_reponse: 1, explication: "L'opposant du pouce est le muscle thénarien principal responsable de l'opposition du pouce. Il est innervé par le nerf médian." },
+          { id: "my_ms_mp_02", question: "Quel nerf innerve les muscles de l'éminence thénar ?", reponses: ["Nerf ulnaire","Nerf radial","Nerf médian","Nerf interosseux"], bonne_reponse: 2, explication: "Le nerf médian innerve la majorité des muscles thénariens." },
+          { id: "my_ms_mp_03", question: "Quel muscle réalise l'extension des doigts ?", reponses: ["Fléchisseur commun superficiel","Extenseur commun des doigts","Lombricaux","Interosseux"], bonne_reponse: 1, explication: "L'extenseur commun des doigts est le principal extenseur des doigts 2 à 5." },
+          { id: "my_ms_mp_04", question: "Quel canal fait passer les tendons fléchisseurs au poignet ?", reponses: ["Canal de Guyon","Canal carpien","Canal radial","Canal cubital"], bonne_reponse: 1, explication: "Le canal carpien fait passer les 9 tendons fléchisseurs et le nerf médian." },
+          { id: "my_ms_mp_05", question: "Quels muscles réalisent les mouvements fins de latéralité des doigts ?", reponses: ["Lombricaux","Fléchisseurs profonds","Interosseux","Extenseurs"], bonne_reponse: 2, explication: "Les interosseux dorsaux écartent les doigts et les interosseux palmaires les rapprochent." },
+          { id: "my_ms_mp_06", question: "Quel nerf peut être comprimé dans le canal de Guyon ?", reponses: ["Nerf médian","Nerf radial","Nerf ulnaire","Nerf interosseux"], bonne_reponse: 2, explication: "Le nerf ulnaire passe dans le canal de Guyon au poignet avec l'artère ulnaire." },
+          { id: "my_ms_mp_07", question: "Quel muscle fléchit la 2e phalange des doigts ?", reponses: ["Fléchisseur commun profond","Fléchisseur commun superficiel","Lombricaux","Interosseux"], bonne_reponse: 1, explication: "Le fléchisseur commun superficiel fléchit la 2e phalange (IPP)." },
+          { id: "my_ms_mp_08", question: "Quel muscle étend le poignet côté radial ?", reponses: ["Extenseur ulnaire du carpe","Long extenseur radial du carpe","Fléchisseur radial du carpe","Palmaire long"], bonne_reponse: 1, explication: "Le long extenseur radial du carpe (LERC) étend et incline radialement le poignet." },
+          { id: "my_ms_mp_09", question: "Quel muscle fléchit et réalise les mouvements fins de la phalange distale ?", reponses: ["Fléchisseur commun superficiel","Fléchisseur commun profond","Lombricaux","Interosseux palmaires"], bonne_reponse: 1, explication: "Le fléchisseur commun profond fléchit la phalange distale (IPD) et est le seul à pouvoir fléchir cette articulation." },
+          { id: "my_ms_mp_10", question: "Quel muscle fléchit la 1ère phalange et étend les 2e et 3e phalanges ?", reponses: ["Fléchisseur commun profond","Fléchisseur commun superficiel","Lombricaux","Interosseux palmaires"], bonne_reponse: 2, explication: "Les lombricaux fléchissent les articulations MCP et étendent les IPP et IPD." }
+        ]}}
+      }},
+      membre_inf: { label: "Membre inférieur", zones: {
+        hanche_cuisse: { label: "Hanche / Cuisse", niveaux: { 1: [
+          { id: "my_mi_ha_01", question: "Quel muscle est le principal extenseur de la hanche ?", reponses: ["Moyen fessier","Petit fessier","Grand fessier","Tenseur du fascia lata"], bonne_reponse: 2, explication: "Le grand fessier (gluteus maximus) est le principal extenseur de la hanche." },
+          { id: "my_mi_ha_02", question: "Quel muscle est le principal abducteur de la hanche ?", reponses: ["Grand fessier","Moyen fessier","Psoas-iliaque","Droit fémoral"], bonne_reponse: 1, explication: "Le moyen fessier est le principal abducteur de la hanche. Il stabilise le bassin lors de la marche." },
+          { id: "my_mi_ha_03", question: "Quel muscle constitue le principal fléchisseur de la hanche ?", reponses: ["Sartorius","Droit fémoral","Psoas-iliaque","Tenseur du fascia lata"], bonne_reponse: 2, explication: "Le psoas-iliaque est le principal fléchisseur de la hanche." },
+          { id: "my_mi_ha_04", question: "Quels muscles constituent les ischio-jambiers ?", reponses: ["Droit fémoral, vaste latéral, vaste médial","Biceps fémoral, semi-tendineux, semi-membraneux","Grand fessier, moyen fessier, petit fessier","Sartorius, gracile, semi-tendineux"], bonne_reponse: 1, explication: "Les ischio-jambiers sont composés du biceps fémoral, du semi-tendineux et du semi-membraneux." },
+          { id: "my_mi_ha_05", question: "Quel est le nerf le plus volumineux du corps humain ?", reponses: ["Nerf fémoral","Nerf obturateur","Nerf sciatique","Nerf glutéal supérieur"], bonne_reponse: 2, explication: "Le nerf sciatique est le nerf le plus volumineux du corps. Il innerve les ischio-jambiers et tout le membre inférieur sous le genou." },
+          { id: "my_mi_ha_06", question: "Quel muscle réalise la rotation interne de la hanche ?", reponses: ["Piriforme","Obturateur interne","Petit fessier","Carré fémoral"], bonne_reponse: 2, explication: "Le petit fessier réalise l'abduction et la rotation interne de la hanche." },
+          { id: "my_mi_ha_07", question: "Quel muscle réalise la rotation externe de la hanche ?", reponses: ["Moyen fessier","Petit fessier","Piriforme","Tenseur du fascia lata"], bonne_reponse: 2, explication: "Le piriforme est le principal rotateur externe de la hanche." },
+          { id: "my_mi_ha_08", question: "Quel muscle adducteur est aussi fléchisseur du genou ?", reponses: ["Grand adducteur","Long adducteur","Gracile","Court adducteur"], bonne_reponse: 2, explication: "Le gracile (droit interne) est adducteur de la hanche et fléchisseur du genou." },
+          { id: "my_mi_ha_09", question: "Quel nerf innerve le psoas-iliaque ?", reponses: ["Nerf sciatique","Branches directes du plexus lombaire","Nerf obturateur","Nerf glutéal supérieur"], bonne_reponse: 1, explication: "Le psoas est innervé par les branches directes du plexus lombaire (L1-L3)." },
+          { id: "my_mi_ha_10", question: "Quel nerf innerve les adducteurs de la hanche ?", reponses: ["Nerf fémoral","Nerf sciatique","Nerf obturateur","Nerf glutéal inférieur"], bonne_reponse: 2, explication: "Le nerf obturateur (L2-L4) innerve les muscles adducteurs de la cuisse." }
+        ]}},
+        genou: { label: "Genou", niveaux: { 1: [
+          { id: "my_mi_ge_01", question: "Quel muscle est le principal extenseur du genou ?", reponses: ["Ischio-jambiers","Quadriceps fémoral","Poplité","Soléaire"], bonne_reponse: 1, explication: "Le quadriceps fémoral est le principal extenseur du genou." },
+          { id: "my_mi_ge_02", question: "Combien de chefs compose le quadriceps ?", reponses: ["2","3","4","5"], bonne_reponse: 2, explication: "Le quadriceps est composé de 4 chefs : droit fémoral, vaste latéral, vaste médial et vaste intermédiaire." },
+          { id: "my_mi_ge_03", question: "Quels muscles constituent la patte d'oie ?", reponses: ["Quadriceps, biceps fémoral, poplité","Sartorius, gracile, semi-tendineux","Grand fessier, moyen fessier, TFL","Gastrocnémien, soléaire, plantaire"], bonne_reponse: 1, explication: "La patte d'oie est formée par les tendons du sartorius, du gracile et du semi-tendineux." },
+          { id: "my_mi_ge_04", question: "Quel chef du quadriceps stabilise la patella en dedans ?", reponses: ["Droit fémoral","Vaste latéral","Vaste médial oblique","Vaste intermédiaire"], bonne_reponse: 2, explication: "Le vaste médial oblique (VMO) stabilise la patella médialement." },
+          { id: "my_mi_ge_05", question: "Quel muscle est rotateur externe du genou fléchi ?", reponses: ["Semi-tendineux","Semi-membraneux","Biceps fémoral","Poplité"], bonne_reponse: 2, explication: "Le biceps fémoral réalise la rotation externe du tibia quand le genou est fléchi." },
+          { id: "my_mi_ge_06", question: "Quel nerf innerve le quadriceps ?", reponses: ["Nerf sciatique","Nerf obturateur","Nerf fémoral","Nerf glutéal"], bonne_reponse: 2, explication: "Le nerf fémoral (L2-L4) innerve le quadriceps." },
+          { id: "my_mi_ge_07", question: "Quel muscle participe à la fois à l'extension du genou et à la flexion de la hanche ?", reponses: ["Vaste latéral","Vaste médial","Droit fémoral","Vaste intermédiaire"], bonne_reponse: 2, explication: "Le droit fémoral est biarticulaire : il étend le genou et fléchit la hanche." },
+          { id: "my_mi_ge_08", question: "Quel muscle est souvent impliqué dans le syndrome de l'essuie-glace ?", reponses: ["Quadriceps","Biceps fémoral","Tenseur du fascia lata","Poplité"], bonne_reponse: 2, explication: "Le tenseur du fascia lata (TFL) et la bandelette ilio-tibiale sont impliqués dans le syndrome de l'essuie-glace." },
+          { id: "my_mi_ge_09", question: "Quel muscle fléchit le genou et réalise la rotation interne du tibia ?", reponses: ["Biceps fémoral","Semi-tendineux","Poplité","Gracile"], bonne_reponse: 2, explication: "Le poplité fléchit le genou et réalise la rotation interne du tibia. Il déverrouille le genou en extension complète." },
+          { id: "my_mi_ge_10", question: "Quel muscle prévient le recurvatum du genou ?", reponses: ["Quadriceps","Ischio-jambiers","Poplité","Gastrocnémien"], bonne_reponse: 1, explication: "Les ischio-jambiers s'opposent au recurvatum (hyperextension) du genou." }
+        ]}},
+        cheville_pied: { label: "Cheville / Pied", niveaux: { 1: [
+          { id: "my_mi_ch_01", question: "Quel muscle est le principal fléchisseur plantaire ?", reponses: ["Tibial antérieur","Long péronier","Triceps sural","Fléchisseur commun des orteils"], bonne_reponse: 2, explication: "Le triceps sural (gastrocnémien + soléaire) est le principal fléchisseur plantaire." },
+          { id: "my_mi_ch_02", question: "Quel muscle réalise la dorsiflexion et l'inversion du pied ?", reponses: ["Long péronier","Court péronier","Tibial antérieur","Extenseur commun des orteils"], bonne_reponse: 2, explication: "Le tibial antérieur réalise la dorsiflexion et l'inversion du pied." },
+          { id: "my_mi_ch_03", question: "Quel tendon est le plus volumineux du corps humain ?", reponses: ["Tendon rotulien","Tendon du tibial antérieur","Tendon d'Achille","Tendon du long péronier"], bonne_reponse: 2, explication: "Le tendon d'Achille est le tendon le plus épais et le plus solide du corps." },
+          { id: "my_mi_ch_04", question: "Quel muscle réalise l'éversion du pied ?", reponses: ["Tibial postérieur","Tibial antérieur","Long péronier latéral","Fléchisseur long de l'hallux"], bonne_reponse: 2, explication: "Le long péronier latéral réalise l'éversion et la flexion plantaire du pied." },
+          { id: "my_mi_ch_05", question: "Quel muscle soutient la voûte plantaire interne ?", reponses: ["Long péronier","Tibial antérieur","Tibial postérieur","Extenseur de l'hallux"], bonne_reponse: 2, explication: "Le tibial postérieur est le principal soutien de la voûte plantaire interne." },
+          { id: "my_mi_ch_06", question: "Quel nerf innerve le tibial antérieur ?", reponses: ["Nerf tibial","Nerf sural","Nerf fibulaire profond","Nerf fibulaire superficiel"], bonne_reponse: 2, explication: "Le nerf fibulaire profond innerve les muscles de la loge antérieure de jambe." },
+          { id: "my_mi_ch_07", question: "Quel muscle compose le triceps sural avec les deux chefs du gastrocnémien ?", reponses: ["Plantaire grêle","Poplité","Soléaire","Long fléchisseur des orteils"], bonne_reponse: 2, explication: "Le triceps sural est composé du gastrocnémien (2 chefs) et du soléaire." },
+          { id: "my_mi_ch_08", question: "Quel muscle fléchit l'hallux ?", reponses: ["Extenseur long de l'hallux","Fléchisseur long de l'hallux","Abducteur de l'hallux","Court fléchisseur de l'hallux"], bonne_reponse: 1, explication: "Le fléchisseur long de l'hallux fléchit le gros orteil et participe à la flexion plantaire." },
+          { id: "my_mi_ch_09", question: "Quel muscle est responsable de la flexion des 4 derniers orteils ?", reponses: ["Extenseur commun des orteils","Fléchisseur court des orteils","Fléchisseur long des orteils","Lombricaux du pied"], bonne_reponse: 2, explication: "Le fléchisseur long des orteils fléchit les 4 derniers orteils." },
+          { id: "my_mi_ch_10", question: "Quel nerf innerve les muscles péroniers (fibulaires) latéraux ?", reponses: ["Nerf tibial","Nerf fibulaire profond","Nerf fibulaire superficiel","Nerf sural"], bonne_reponse: 2, explication: "Le nerf fibulaire superficiel innerve les muscles péroniers latéraux (éverseurs du pied)." }
+        ]}}
+      }},
+      tronc: { label: "Tronc", niveaux: { 1: [
+        { id: "my_tr_01", question: "Quel muscle est le principal fléchisseur du tronc ?", reponses: ["Grand dorsal","Droit de l'abdomen","Carré des lombes","Érecteur du rachis"], bonne_reponse: 1, explication: "Le droit de l'abdomen est le principal fléchisseur du tronc." },
+        { id: "my_tr_02", question: "Quel muscle réalise l'extension du rachis ?", reponses: ["Droit de l'abdomen","Oblique externe","Érecteur du rachis","Transverse de l'abdomen"], bonne_reponse: 2, explication: "L'érecteur du rachis (masse commune) est le principal extenseur du rachis." },
+        { id: "my_tr_03", question: "Quel muscle est le plus profond de la paroi abdominale ?", reponses: ["Oblique externe","Oblique interne","Droit de l'abdomen","Transverse de l'abdomen"], bonne_reponse: 3, explication: "Le transverse de l'abdomen est le muscle abdominal le plus profond." },
+        { id: "my_tr_04", question: "Quel muscle est responsable de l'inspiration principale ?", reponses: ["Intercostaux externes","Scalènes","Diaphragme","Sternocléidomastoïdien"], bonne_reponse: 2, explication: "Le diaphragme est le principal muscle inspiratoire." },
+        { id: "my_tr_05", question: "Quel muscle stabilise les vertèbres lombaires en profondeur ?", reponses: ["Carré des lombes","Grand dorsal","Multifides","Iliopsoas"], bonne_reponse: 2, explication: "Les multifides sont des muscles profonds essentiels à la stabilisation segmentaire du rachis." },
+        { id: "my_tr_06", question: "Quel muscle réalise l'inclinaison latérale du tronc ?", reponses: ["Droit de l'abdomen","Carré des lombes","Transverse","Multifides"], bonne_reponse: 1, explication: "Le carré des lombes réalise l'inclinaison latérale du tronc." },
+        { id: "my_tr_07", question: "Quel muscle réalise la rotation controlatérale du tronc ?", reponses: ["Oblique interne","Oblique externe","Droit de l'abdomen","Transverse"], bonne_reponse: 1, explication: "L'oblique externe réalise la rotation controlatérale du tronc." },
+        { id: "my_tr_08", question: "Quel muscle forme le plancher du périnée ?", reponses: ["Transverse de l'abdomen","Élévateur de l'anus","Obturateur interne","Piriforme"], bonne_reponse: 1, explication: "L'élévateur de l'anus est le principal muscle du plancher pelvien." },
+        { id: "my_tr_09", question: "Quel muscle soutient les organes abdominaux comme un caisson ?", reponses: ["Droit de l'abdomen","Oblique externe","Plancher pelvien","Transverse de l'abdomen"], bonne_reponse: 3, explication: "Le transverse de l'abdomen, avec le diaphragme et le plancher pelvien, forme le caisson abdominal." },
+        { id: "my_tr_10", question: "Quel muscle grand dorsal réalise l'extension et l'adduction du bras ?", reponses: ["Grand pectoral","Grand dorsal","Grand rond","Subscapulaire"], bonne_reponse: 1, explication: "Le grand dorsal réalise l'extension, l'adduction et la rotation interne du bras." }
+      ]}}
     }
   },
-
+  osteologie: {
+    label: "Ostéologie", emoji: "🦴", description: "Étude des os et du squelette",
+    regions: {
+      membre_sup: { label: "Membre supérieur", zones: {
+        epaule: { label: "Épaule", niveaux: { 1: [
+          { id: "os_ms_ep_01", question: "Quel os forme la partie postérieure de la ceinture scapulaire ?", reponses: ["Clavicule","Humérus","Scapula","Sternum"], bonne_reponse: 2, explication: "La scapula (omoplate) est un os plat triangulaire formant la partie postérieure de la ceinture scapulaire." },
+          { id: "os_ms_ep_02", question: "Quel os relie le sternum à la scapula ?", reponses: ["Humérus","Clavicule","Radius","Côte"], bonne_reponse: 1, explication: "La clavicule relie le sternum à la scapula. C'est le seul os reliant le membre supérieur au thorax." },
+          { id: "os_ms_ep_03", question: "Sur quelle partie de la scapula s'articule la tête humérale ?", reponses: ["L'acromion","Le processus coracoïde","La cavité glénoïde","La fosse sous-épineuse"], bonne_reponse: 2, explication: "La cavité glénoïde reçoit la tête humérale pour former l'articulation gléno-humérale." },
+          { id: "os_ms_ep_04", question: "Comment appelle-t-on la saillie osseuse antérieure de la scapula ?", reponses: ["Acromion","Processus coracoïde","Épine de la scapula","Tubercule supra-glénoïdal"], bonne_reponse: 1, explication: "Le processus coracoïde est une saillie osseuse antérieure de la scapula en forme de bec." },
+          { id: "os_ms_ep_05", question: "Quel est le point le plus fréquemment fracturé de l'humérus proximal ?", reponses: ["La tête humérale","Le col anatomique","Le col chirurgical","Le trochiter"], bonne_reponse: 2, explication: "Le col chirurgical de l'humérus est la zone de fragilité la plus fréquemment fracturée." },
+          { id: "os_ms_ep_06", question: "Quelle structure osseuse surplombe l'espace sous-acromial ?", reponses: ["Processus coracoïde","Acromion","Cavité glénoïde","Col de la scapula"], bonne_reponse: 1, explication: "L'acromion est le prolongement latéral de l'épine de la scapula qui surplombe l'espace sous-acromial." },
+          { id: "os_ms_ep_07", question: "Combien d'articulations composent le complexe de l'épaule ?", reponses: ["2","3","4","5"], bonne_reponse: 2, explication: "Le complexe de l'épaule comprend 4 articulations : gléno-humérale, acromio-claviculaire, sterno-claviculaire et scapulo-thoracique." },
+          { id: "os_ms_ep_08", question: "Quel os est le plus souvent fracturé lors d'une chute sur la main tendue chez l'enfant ?", reponses: ["Humérus","Radius","Clavicule","Scapula"], bonne_reponse: 2, explication: "La clavicule est l'os le plus fréquemment fracturé chez l'enfant lors d'une chute." },
+          { id: "os_ms_ep_09", question: "Où se situe le tubercule majeur (trochiter) de l'humérus ?", reponses: ["Face médiale","Face latérale supérieure","Extrémité inférieure","Col chirurgical"], bonne_reponse: 1, explication: "Le tubercule majeur (trochiter) est situé sur la face latérale supérieure de l'humérus." },
+          { id: "os_ms_ep_10", question: "Quelle est la principale caractéristique de la tête humérale ?", reponses: ["Elle est plate","Elle est sphérique et orientée en dedans","Elle est cylindrique","Elle est en forme de poulie"], bonne_reponse: 1, explication: "La tête humérale est une surface sphérique orientée en haut, en dedans et en arrière." }
+        ]}},
+        coude: { label: "Coude", niveaux: { 1: [
+          { id: "os_ms_co_01", question: "Combien d'os composent l'articulation du coude ?", reponses: ["2","3","4","5"], bonne_reponse: 1, explication: "Le coude est formé par 3 os : l'humérus, le radius et l'ulna." },
+          { id: "os_ms_co_02", question: "Quelle partie de l'ulna s'articule avec la trochlée humérale ?", reponses: ["Tête de l'ulna","Processus styloïde","Incisure trochléaire","Col de l'ulna"], bonne_reponse: 2, explication: "L'incisure trochléaire de l'ulna s'articule avec la trochlée humérale." },
+          { id: "os_ms_co_03", question: "Quel relief osseux peut être palpé à la face postérieure du coude ?", reponses: ["Épicondyle latéral","Épicondyle médial","Olécrâne de l'ulna","Capitulum"], bonne_reponse: 2, explication: "L'olécrâne est la saillie postérieure de l'ulna palpable à la face postérieure du coude." },
+          { id: "os_ms_co_04", question: "Quelle partie de l'humérus s'articule avec la tête radiale ?", reponses: ["Trochlée","Capitulum","Épicondyle","Fosse coronoïdienne"], bonne_reponse: 1, explication: "Le capitulum de l'humérus s'articule avec la tête du radius." },
+          { id: "os_ms_co_05", question: "Quelle fracture du coude est la plus fréquente chez l'enfant ?", reponses: ["Fracture de l'olécrâne","Fracture supra-condylienne","Fracture de la tête radiale","Fracture de l'épicondyle"], bonne_reponse: 1, explication: "La fracture supra-condylienne de l'humérus est la fracture du coude la plus fréquente chez l'enfant." },
+          { id: "os_ms_co_06", question: "Quelle est la particularité de l'articulation radio-ulnaire proximale ?", reponses: ["C'est une énarthrose","C'est une trochoïde permettant la rotation","C'est une arthrodie","C'est une ginglyme"], bonne_reponse: 1, explication: "L'articulation radio-ulnaire proximale est une trochoïde (pivot) permettant la prono-supination." },
+          { id: "os_ms_co_07", question: "Où se situe l'épicondyle médial de l'humérus ?", reponses: ["Face antérieure","Face latérale","Face médiale","Face postérieure"], bonne_reponse: 2, explication: "L'épicondyle médial (épitrochlée) est la saillie osseuse de la face médiale du coude." },
+          { id: "os_ms_co_08", question: "Quel nerf passe dans le sillon derrière l'épicondyle médial ?", reponses: ["Nerf médian","Nerf radial","Nerf ulnaire","Nerf musculo-cutané"], bonne_reponse: 2, explication: "Le nerf ulnaire passe dans le sillon épitrochléo-olécrânien derrière l'épicondyle médial." },
+          { id: "os_ms_co_09", question: "Quel os du coude est le plus long os de l'avant-bras ?", reponses: ["Radius","Ulna","Ils sont égaux","Cela varie"], bonne_reponse: 1, explication: "L'ulna est légèrement plus long que le radius." },
+          { id: "os_ms_co_10", question: "Quel os fait la liaison entre le coude et le poignet avec une tête en bas ?", reponses: ["Ulna","Radius","Humérus","Carpe"], bonne_reponse: 1, explication: "Le radius a une tête en haut (coude) et s'élargit en bas (poignet)." }
+        ]}},
+        main_poignet: { label: "Main / Poignet", niveaux: { 1: [
+          { id: "os_ms_mp_01", question: "Combien d'os carpiens compose le carpe ?", reponses: ["6","7","8","10"], bonne_reponse: 2, explication: "Le carpe est composé de 8 os répartis en 2 rangées." },
+          { id: "os_ms_mp_02", question: "Quel os carpien est le plus souvent fracturé ?", reponses: ["Semi-lunaire","Scaphoïde","Grand os","Pisiforme"], bonne_reponse: 1, explication: "Le scaphoïde est l'os carpien le plus fréquemment fracturé." },
+          { id: "os_ms_mp_03", question: "Combien de métacarpes compose la main ?", reponses: ["4","5","6","8"], bonne_reponse: 1, explication: "La main comprend 5 métacarpes numérotés de I (pouce) à V (auriculaire)." },
+          { id: "os_ms_mp_04", question: "Combien de phalanges possède le pouce ?", reponses: ["1","2","3","4"], bonne_reponse: 1, explication: "Le pouce possède 2 phalanges (proximale et distale) contrairement aux autres doigts qui en ont 3." },
+          { id: "os_ms_mp_05", question: "Quel os du carpe est le plus volumineux ?", reponses: ["Scaphoïde","Semi-lunaire","Grand os","Os crochu"], bonne_reponse: 2, explication: "Le grand os (capitatum) est le plus volumineux des os du carpe." },
+          { id: "os_ms_mp_06", question: "Quel os porte un crochet palpable à la face palmaire du poignet ?", reponses: ["Pisiforme","Trapèze","Os crochu","Pyramidal"], bonne_reponse: 2, explication: "L'os crochu (hamatum) porte un crochet (hamulus) palpable à la face palmaire du poignet." },
+          { id: "os_ms_mp_07", question: "Quel type d'articulation permet les mouvements du poignet ?", reponses: ["Ginglyme","Trochoïde","Condylarthrose radio-carpienne","Énarthrose"], bonne_reponse: 2, explication: "L'articulation radio-carpienne est une condylarthrose permettant la flexion-extension et l'abduction-adduction." },
+          { id: "os_ms_mp_08", question: "Combien de phalanges possède chaque doigt (2 au 5) ?", reponses: ["2","3","4","5"], bonne_reponse: 1, explication: "Les doigts 2 à 5 possèdent 3 phalanges : proximale (P1), moyenne (P2) et distale (P3)." },
+          { id: "os_ms_mp_09", question: "Quel est le type d'articulation de la trapézo-métacarpienne du pouce ?", reponses: ["Ginglyme","Condylarthrose","Selle (sellar)","Énarthrose"], bonne_reponse: 2, explication: "L'articulation trapézo-métacarpienne du pouce est une articulation en selle permettant l'opposition." },
+          { id: "os_ms_mp_10", question: "Quel os sésamoïde se trouve à la face palmaire du pouce ?", reponses: ["Pisiforme","Trapèze","Sésamoïde du pouce","Métacarpe I"], bonne_reponse: 2, explication: "Deux petits os sésamoïdes sont constants à la face palmaire de l'articulation MCP du pouce." }
+        ]}}
+      }},
+      membre_inf: { label: "Membre inférieur", zones: {
+        hanche_cuisse: { label: "Hanche / Cuisse", niveaux: { 1: [
+          { id: "os_mi_ha_01", question: "Quel type d'articulation est la hanche ?", reponses: ["Condylarthrose","Ginglyme","Énarthrose","Trochoïde"], bonne_reponse: 2, explication: "La hanche est une énarthrose : la tête fémorale sphérique s'articule avec le cotyle." },
+          { id: "os_mi_ha_02", question: "Quel os constitue le cotyle (acétabulum) ?", reponses: ["Uniquement l'ilion","Ilion, ischion et pubis","Ilion et pubis","Ischion et pubis"], bonne_reponse: 1, explication: "Le cotyle est formé par la réunion de l'ilion, de l'ischion et du pubis." },
+          { id: "os_mi_ha_03", question: "Quel est l'os le plus long du corps humain ?", reponses: ["Tibia","Humérus","Fémur","Radius"], bonne_reponse: 2, explication: "Le fémur est l'os le plus long et le plus résistant du corps." },
+          { id: "os_mi_ha_04", question: "Où se situe le grand trochanter ?", reponses: ["Face médiale du fémur proximal","Face latérale du fémur proximal","Extrémité distale du fémur","Col du fémur"], bonne_reponse: 1, explication: "Le grand trochanter est une saillie osseuse sur la face latérale du fémur proximal." },
+          { id: "os_mi_ha_05", question: "Quelle fracture est fréquente chez le sujet âgé ostéoporotique ?", reponses: ["Fracture diaphysaire du fémur","Fracture du col du fémur","Fracture du cotyle","Fracture du grand trochanter"], bonne_reponse: 1, explication: "La fracture du col du fémur est très fréquente chez le sujet âgé ostéoporotique." },
+          { id: "os_mi_ha_06", question: "Quel os forme la partie antérieure du bassin ?", reponses: ["Ilion","Ischion","Pubis","Sacrum"], bonne_reponse: 2, explication: "Le pubis forme la partie antérieure du bassin." },
+          { id: "os_mi_ha_07", question: "Combien d'os composent le bassin (pelvis osseux) ?", reponses: ["2","3","4","5"], bonne_reponse: 2, explication: "Le bassin est composé de 4 os : les 2 os coxaux, le sacrum et le coccyx." },
+          { id: "os_mi_ha_08", question: "Quel angle forme le col fémoral avec la diaphyse fémorale ?", reponses: ["90°","115°","125-135°","150°"], bonne_reponse: 2, explication: "L'angle cervico-diaphysaire normal est de 125-135°." },
+          { id: "os_mi_ha_09", question: "Comment appelle-t-on la saillie osseuse sur laquelle on est assis ?", reponses: ["Crête iliaque","Épine iliaque","Tubérosité ischiatique","Grand trochanter"], bonne_reponse: 2, explication: "La tubérosité ischiatique est le point d'appui lors de la position assise." },
+          { id: "os_mi_ha_10", question: "Quel ligament relie la tête fémorale au cotyle ?", reponses: ["Ligament ilio-fémoral","Ligament pubo-fémoral","Ligament de la tête fémorale","Ligament ischio-fémoral"], bonne_reponse: 2, explication: "Le ligament de la tête fémorale (ligament rond) relie la tête fémorale à la fossette acétabulaire." }
+        ]}},
+        genou: { label: "Genou", niveaux: { 1: [
+          { id: "os_mi_ge_01", question: "Combien d'os composent l'articulation du genou ?", reponses: ["2","3","4","5"], bonne_reponse: 1, explication: "Le genou est formé par 3 os : le fémur, le tibia et la patella." },
+          { id: "os_mi_ge_02", question: "Quel os sésamoïde est présent au niveau du genou ?", reponses: ["Fabella","Patella","Os trigone","Sésamoïde du quadriceps"], bonne_reponse: 1, explication: "La patella (rotule) est un os sésamoïde enchâssé dans le tendon quadricipital." },
+          { id: "os_mi_ge_03", question: "Quelle partie du fémur distal s'articule avec le tibia ?", reponses: ["Trochlée fémorale","Condyles fémoraux","Épicondyles","Fosse intercondylaire"], bonne_reponse: 1, explication: "Les deux condyles fémoraux s'articulent avec les plateaux tibiaux." },
+          { id: "os_mi_ge_04", question: "Où se trouve la tubérosité tibiale antérieure ?", reponses: ["Face postérieure du tibia","Face latérale du tibia","Face antérieure du tibia proximal","Épiphyse tibiale distale"], bonne_reponse: 2, explication: "La tubérosité tibiale antérieure est le point d'insertion du tendon patellaire." },
+          { id: "os_mi_ge_05", question: "Quel os est latéral et non articulaire au genou ?", reponses: ["Tibia","Fémur","Patella","Fibula"], bonne_reponse: 3, explication: "La fibula (péroné) ne fait pas partie de l'articulation du genou." },
+          { id: "os_mi_ge_06", question: "Comment appelle-t-on la surface articulaire supérieure du tibia ?", reponses: ["Condyles tibiaux","Plateaux tibiaux","Épines tibiales","Ménisques tibiaux"], bonne_reponse: 1, explication: "Les plateaux tibiaux forment la surface articulaire supérieure du tibia." },
+          { id: "os_mi_ge_07", question: "Quel relief osseux sépare les deux plateaux tibiaux ?", reponses: ["Tubérosité tibiale","Épines tibiales (éminence intercondylaire)","Col du tibia","Plateau médial"], bonne_reponse: 1, explication: "L'éminence intercondylaire (épines tibiales) est la saillie centrale entre les deux plateaux tibiaux." },
+          { id: "os_mi_ge_08", question: "Quelle est la face articulaire de la patella ?", reponses: ["Face antérieure (rugueuse)","Face postérieure (cartilagineuse)","Face supérieure","Face inférieure"], bonne_reponse: 1, explication: "La face postérieure de la patella est recouverte de cartilage et s'articule avec la trochlée fémorale." },
+          { id: "os_mi_ge_09", question: "Quel os est le deuxième plus long du corps après le fémur ?", reponses: ["Fibula","Humérus","Tibia","Radius"], bonne_reponse: 2, explication: "Le tibia est le deuxième plus long os du corps." },
+          { id: "os_mi_ge_10", question: "Quelle maladie touche la tubérosité tibiale chez l'adolescent sportif ?", reponses: ["Maladie de Legg-Calvé-Perthes","Maladie d'Osgood-Schlatter","Maladie de Sever","Maladie de Köhler"], bonne_reponse: 1, explication: "La maladie d'Osgood-Schlatter est une ostéochondrose de la tubérosité tibiale antérieure." }
+        ]}},
+        cheville_pied: { label: "Cheville / Pied", niveaux: { 1: [
+          { id: "os_mi_ch_01", question: "Combien d'os compose le squelette du pied ?", reponses: ["22","26","28","32"], bonne_reponse: 1, explication: "Le pied est composé de 26 os : 7 os du tarse, 5 métatarses et 14 phalanges." },
+          { id: "os_mi_ch_02", question: "Quel os du tarse s'articule avec le tibia et la fibula ?", reponses: ["Calcanéus","Cuboïde","Talus","Naviculaire"], bonne_reponse: 2, explication: "Le talus s'articule avec le tibia et la fibula pour former la mortaise tibio-fibulaire." },
+          { id: "os_mi_ch_03", question: "Quel est l'os le plus volumineux du tarse ?", reponses: ["Talus","Naviculaire","Calcanéus","Cuboïde"], bonne_reponse: 2, explication: "Le calcanéus est le plus grand et le plus volumineux des os du tarse." },
+          { id: "os_mi_ch_04", question: "Quel os est souvent fracturé lors d'une entorse grave de la cheville ?", reponses: ["Talus","Calcanéus","Base du 5e métatarse","Naviculaire"], bonne_reponse: 2, explication: "La fracture de la base du 5e métatarse est fréquente lors d'une entorse en inversion." },
+          { id: "os_mi_ch_05", question: "Combien d'os cunéiformes compte le tarse ?", reponses: ["1","2","3","4"], bonne_reponse: 2, explication: "Le tarse comprend 3 os cunéiformes (médial, intermédiaire et latéral)." },
+          { id: "os_mi_ch_06", question: "Quelle articulation forme la cheville proprement dite ?", reponses: ["Articulation sous-talienne","Articulation médio-tarsienne","Articulation tibio-tarsienne","Articulation tarso-métatarsienne"], bonne_reponse: 2, explication: "L'articulation tibio-tarsienne est la cheville proprement dite." },
+          { id: "os_mi_ch_07", question: "Comment appelle-t-on la saillie postérieure du calcanéus ?", reponses: ["Sustentaculum tali","Tubérosité calcanéenne","Processus latéral","Grande apophyse"], bonne_reponse: 1, explication: "La tubérosité calcanéenne est la saillie postérieure du calcanéus formant le talon." },
+          { id: "os_mi_ch_08", question: "Quel os du tarse est en dehors et s'articule avec le 4e et 5e métatarse ?", reponses: ["Naviculaire","Talus","Cuboïde","Cunéiforme latéral"], bonne_reponse: 2, explication: "Le cuboïde est situé sur le bord latéral du pied et s'articule avec les 4e et 5e métatarses." },
+          { id: "os_mi_ch_09", question: "Quel type de voûte forme le pied ?", reponses: ["Une voûte plane","Une voûte à 2 arches","Une voûte à 3 arches (tripode)","Une voûte à 4 arches"], bonne_reponse: 2, explication: "Le pied forme un tripode d'appui : tête du 1er métatarse, tête du 5e métatarse et calcanéus." },
+          { id: "os_mi_ch_10", question: "Quelle fracture du calcanéus est fréquente lors d'une chute de hauteur ?", reponses: ["Fracture de l'apophyse antérieure","Fracture thalamique (du plateau)","Fracture de la tubérosité","Fracture en bec de canard"], bonne_reponse: 1, explication: "La fracture thalamique du calcanéus est fréquente lors d'une chute de hauteur." }
+        ]}}
+      }},
+      tronc: { label: "Tronc", niveaux: { 1: [
+        { id: "os_tr_01", question: "Combien de vertèbres cervicales compose le rachis cervical ?", reponses: ["5","6","7","8"], bonne_reponse: 2, explication: "Le rachis cervical est composé de 7 vertèbres (C1 à C7)." },
+        { id: "os_tr_02", question: "Quel os forme la première vertèbre cervicale ?", reponses: ["Axis","Atlas","C3","Os occipital"], bonne_reponse: 1, explication: "L'atlas (C1) est la première vertèbre cervicale. Il n'a pas de corps vertébral." },
+        { id: "os_tr_03", question: "Combien de vertèbres lombaires compose le rachis lombaire ?", reponses: ["3","4","5","6"], bonne_reponse: 2, explication: "Le rachis lombaire est composé de 5 vertèbres (L1 à L5)." },
+        { id: "os_tr_04", question: "Quel est le rôle du disque intervertébral ?", reponses: ["Relier les vertèbres uniquement","Absorber les chocs et permettre les mouvements","Protéger la moelle épinière","Irriguer les vertèbres"], bonne_reponse: 1, explication: "Le disque intervertébral absorbe les chocs, permet les mouvements du rachis." },
+        { id: "os_tr_05", question: "Combien de paires de côtes sont dites vraies ?", reponses: ["5 paires","7 paires","10 paires","12 paires"], bonne_reponse: 1, explication: "Les 7 premières paires de côtes sont vraies (reliées directement au sternum)." },
+        { id: "os_tr_06", question: "Combien de vertèbres sacrées fusionnent pour former le sacrum ?", reponses: ["3","4","5","6"], bonne_reponse: 2, explication: "Le sacrum est formé par la fusion de 5 vertèbres sacrées (S1-S5)." },
+        { id: "os_tr_07", question: "Quelle courbure du rachis est une lordose ?", reponses: ["Courbure thoracique","Courbure cervicale","Courbure sacrée","Toutes les courbures"], bonne_reponse: 1, explication: "Les courbures cervicale et lombaire sont des lordoses (concavité postérieure)." },
+        { id: "os_tr_08", question: "Quel os constitue la partie inférieure du sternum ?", reponses: ["Manubrium","Corps du sternum","Appendice xiphoïde","Angle de Louis"], bonne_reponse: 2, explication: "L'appendice xiphoïde est la partie la plus inférieure du sternum." },
+        { id: "os_tr_09", question: "Combien de vertèbres coccygiennes forment le coccyx ?", reponses: ["2-3","3-5","5-7","7-9"], bonne_reponse: 1, explication: "Le coccyx est formé par la fusion de 3 à 5 vertèbres coccygiennes rudimentaires." },
+        { id: "os_tr_10", question: "Quel est le diamètre le plus étroit du canal rachidien ?", reponses: ["Cervical","Thoracique","Lombaire","Sacré"], bonne_reponse: 1, explication: "Le canal rachidien est le plus étroit au niveau thoracique." }
+      ]}}
+    }
+  },
   neurologie: {
-    label: "Neurologie",
-    emoji: "🧠",
-    description: "Étude du système nerveux",
-    niveaux: {
-      1: [
-        {
-          id: "ne_1_01",
-          question: "Quelle est la vitesse de conduction d'un influx nerveux dans une fibre myélinisée ?",
-          reponses: ["1 à 5 m/s", "10 à 30 m/s", "70 à 120 m/s", "200 à 300 m/s"],
-          bonne_reponse: 2,
-          explication: "Dans une fibre myélinisée, la conduction saltatoire permet des vitesses de 70 à 120 m/s. Dans les fibres non myélinisées, la vitesse est bien plus lente (0,5 à 2 m/s)."
-        },
-        {
-          id: "ne_1_02",
-          question: "Quel neurotransmetteur est libéré à la jonction neuromusculaire ?",
-          reponses: ["La dopamine", "La sérotonine", "L'acétylcholine", "La noradrénaline"],
-          bonne_reponse: 2,
-          explication: "L'acétylcholine est le neurotransmetteur libéré par les motoneurones à la jonction neuromusculaire. Elle se fixe sur les récepteurs nicotiniques et déclenche la contraction."
-        },
-        {
-          id: "ne_1_03",
-          question: "Combien de paires de nerfs crâniens possède l'être humain ?",
-          reponses: ["10 paires", "12 paires", "14 paires", "16 paires"],
-          bonne_reponse: 1,
-          explication: "L'être humain possède 12 paires de nerfs crâniens, numérotés de I à XII. Ils émergent directement de l'encéphale et innervent principalement la tête et le cou."
-        },
-        {
-          id: "ne_1_04",
-          question: "Quelle partie du cerveau coordonne l'équilibre et les mouvements fins ?",
-          reponses: ["Le thalamus", "L'hypothalamus", "Le cervelet", "Le bulbe rachidien"],
-          bonne_reponse: 2,
-          explication: "Le cervelet coordonne les mouvements volontaires, l'équilibre et le tonus musculaire. Une atteinte cérébelleuse provoque une ataxie (troubles de la coordination)."
-        },
-        {
-          id: "ne_1_05",
-          question: "Comment appelle-t-on les cellules gliales qui produisent la myéline dans le SNC ?",
-          reponses: ["Les cellules de Schwann", "Les astrocytes", "Les oligodendrocytes", "Les cellules microgliales"],
-          bonne_reponse: 2,
-          explication: "Les oligodendrocytes produisent la myéline dans le système nerveux central. Dans le SNP, c'est le rôle des cellules de Schwann."
-        },
-        {
-          id: "ne_1_06",
-          question: "Quel est le rôle du liquide cérébrospinal (LCS) ?",
-          reponses: [
-            "Transporter l'oxygène au cerveau",
-            "Protection mécanique et métabolique de l'encéphale",
-            "Produire les neurotransmetteurs",
-            "Réguler la température corporelle"
-          ],
-          bonne_reponse: 1,
-          explication: "Le LCS protège mécaniquement l'encéphale et la moelle épinière contre les chocs, assure des échanges métaboliques et élimine les déchets du tissu nerveux."
-        },
-        {
-          id: "ne_1_07",
-          question: "Quel nerf innerve le muscle deltoïde ?",
-          reponses: ["Le nerf radial", "Le nerf axillaire", "Le nerf musculo-cutané", "Le nerf médian"],
-          bonne_reponse: 1,
-          explication: "Le nerf axillaire (ou circonflexe) issu du plexus brachial (C5-C6) innerve le muscle deltoïde et le petit rond. Sa lésion entraîne une paralysie de l'abduction de l'épaule."
-        },
-        {
-          id: "ne_1_08",
-          question: "Quelle structure sépare le système nerveux central du sang ?",
-          reponses: [
-            "La dure-mère",
-            "La pie-mère",
-            "La barrière hémato-encéphalique",
-            "L'arachnoïde"
-          ],
-          bonne_reponse: 2,
-          explication: "La barrière hémato-encéphalique (BHE) est une barrière sélective formée par les cellules endothéliales des capillaires cérébraux. Elle protège le SNC des substances nocives."
-        },
-        {
-          id: "ne_1_09",
-          question: "Combien de paires de nerfs rachidiens possède l'être humain ?",
-          reponses: ["21 paires", "31 paires", "41 paires", "51 paires"],
-          bonne_reponse: 1,
-          explication: "Il existe 31 paires de nerfs rachidiens : 8 cervicales, 12 thoraciques, 5 lombaires, 5 sacrées et 1 coccygienne. Chacun émerge de la moelle épinière par une racine antérieure (motrice) et postérieure (sensitive)."
-        },
-        {
-          id: "ne_1_10",
-          question: "Quel plexus nerveux innerve le membre inférieur ?",
-          reponses: ["Le plexus brachial", "Le plexus cervical", "Le plexus lombo-sacré", "Le plexus solaire"],
-          bonne_reponse: 2,
-          explication: "Le plexus lombo-sacré innerve le membre inférieur. Il comprend le plexus lombaire (L1-L4) et le plexus sacré (L4-S3), donnant notamment le nerf fémoral et le nerf sciatique."
-        }
-      ]
+    label: "Neurologie", emoji: "🧠", description: "Étude du système nerveux",
+    regions: {
+      membre_sup: { label: "Membre supérieur", zones: {
+        epaule: { label: "Épaule", niveaux: { 1: [
+          { id: "ne_ms_ep_01", question: "Quel plexus nerveux innerve le membre supérieur ?", reponses: ["Plexus cervical","Plexus brachial","Plexus lombo-sacré","Plexus solaire"], bonne_reponse: 1, explication: "Le plexus brachial est formé par les racines C5 à T1." },
+          { id: "ne_ms_ep_02", question: "Quel nerf innerve le deltoïde et le petit rond ?", reponses: ["Nerf radial","Nerf axillaire","Nerf suprascapulaire","Nerf musculo-cutané"], bonne_reponse: 1, explication: "Le nerf axillaire (circonflexe) C5-C6 innerve le deltoïde et le petit rond." },
+          { id: "ne_ms_ep_03", question: "Quel nerf innerve le sus-épineux et le sous-épineux ?", reponses: ["Nerf axillaire","Nerf suprascapulaire","Nerf subscapulaire","Nerf thoraco-dorsal"], bonne_reponse: 1, explication: "Le nerf suprascapulaire (C5-C6) innerve le sus-épineux et le sous-épineux." },
+          { id: "ne_ms_ep_04", question: "Quelle racine est principalement testée par l'abduction de l'épaule ?", reponses: ["C4","C5","C6","C7"], bonne_reponse: 1, explication: "La racine C5 est principalement testée par l'abduction de l'épaule (deltoïde)." },
+          { id: "ne_ms_ep_05", question: "Quel nerf innerve le grand dentelé ?", reponses: ["Nerf axillaire","Nerf thoraco-dorsal","Nerf thoracique long","Nerf subscapulaire"], bonne_reponse: 2, explication: "Le nerf thoracique long (nerf de Charles Bell) innerve le grand dentelé." },
+          { id: "ne_ms_ep_06", question: "Quelle lésion du plexus brachial touche les racines supérieures C5-C6 ?", reponses: ["Paralysie de Klumpke","Paralysie d'Erb-Duchenne","Lésion du nerf radial","Syndrome du défilé"], bonne_reponse: 1, explication: "La paralysie d'Erb-Duchenne touche les racines C5-C6." },
+          { id: "ne_ms_ep_07", question: "Quel nerf peut être lésé lors d'une luxation antérieure de l'épaule ?", reponses: ["Nerf radial","Nerf médian","Nerf axillaire","Nerf ulnaire"], bonne_reponse: 2, explication: "Le nerf axillaire est vulnérable lors d'une luxation antérieure de l'épaule." },
+          { id: "ne_ms_ep_08", question: "Quel nerf innerve le grand pectoral ?", reponses: ["Nerf axillaire","Nerf musculo-cutané","Nerfs pectoraux médial et latéral","Nerf thoraco-dorsal"], bonne_reponse: 2, explication: "Le grand pectoral est innervé par les nerfs pectoraux médial et latéral." },
+          { id: "ne_ms_ep_09", question: "Quel nerf innerve le grand dorsal ?", reponses: ["Nerf axillaire","Nerf thoraco-dorsal","Nerf suprascapulaire","Nerf radial"], bonne_reponse: 1, explication: "Le nerf thoraco-dorsal (C6-C8) innerve le grand dorsal." },
+          { id: "ne_ms_ep_10", question: "Quelle racine est testée par la rotation externe de l'épaule ?", reponses: ["C4","C5","C6","C7"], bonne_reponse: 1, explication: "La racine C5 est testée par la rotation externe (sous-épineux)." }
+        ]}},
+        coude: { label: "Coude", niveaux: { 1: [
+          { id: "ne_ms_co_01", question: "Quel nerf passe dans le canal cubital au coude ?", reponses: ["Nerf médian","Nerf radial","Nerf ulnaire","Nerf musculo-cutané"], bonne_reponse: 2, explication: "Le nerf ulnaire passe dans le canal cubital au coude." },
+          { id: "ne_ms_co_02", question: "Quelle est la conséquence d'une lésion du nerf radial au coude ?", reponses: ["Main en griffe","Poignet tombant (drop wrist)","Pince pouce-index déficitaire","Anesthésie de la paume"], bonne_reponse: 1, explication: "La lésion du nerf radial entraîne un poignet tombant (drop wrist)." },
+          { id: "ne_ms_co_03", question: "Quelle racine est principalement testée par l'extension du coude ?", reponses: ["C5","C6","C7","C8"], bonne_reponse: 2, explication: "La racine C7 est testée par l'extension du coude (triceps)." },
+          { id: "ne_ms_co_04", question: "Quel nerf innerve le pronateur rond ?", reponses: ["Nerf ulnaire","Nerf radial","Nerf médian","Nerf musculo-cutané"], bonne_reponse: 2, explication: "Le nerf médian innerve le pronateur rond et la plupart des fléchisseurs de l'avant-bras." },
+          { id: "ne_ms_co_05", question: "Quelle racine est testée par la flexion du coude en position neutre ?", reponses: ["C4","C5","C6","C7"], bonne_reponse: 2, explication: "La racine C6 est principalement testée par la flexion du coude en position neutre (brachioradial)." },
+          { id: "ne_ms_co_06", question: "Quel signe caractérise une lésion du nerf médian au coude ?", reponses: ["Main en griffe ulnaire","Signe de Froment","Signe de la bénédiction","Poignet tombant"], bonne_reponse: 2, explication: "La lésion du nerf médian donne la 'main de prédicateur'." },
+          { id: "ne_ms_co_07", question: "Quel nerf peut être comprimé dans le tunnel radial au coude ?", reponses: ["Nerf ulnaire","Nerf interosseux postérieur","Nerf médian","Nerf musculo-cutané"], bonne_reponse: 1, explication: "Le nerf interosseux postérieur (branche profonde du nerf radial) peut être comprimé dans le tunnel radial." },
+          { id: "ne_ms_co_08", question: "Quel nerf donne la branche sensitive pour le bord ulnaire de l'avant-bras ?", reponses: ["Nerf médian","Nerf ulnaire","Nerf brachial cutané médial","Nerf radial"], bonne_reponse: 2, explication: "Le nerf brachial cutané médial innerve la peau du bord ulnaire de l'avant-bras." },
+          { id: "ne_ms_co_09", question: "Où le nerf médian peut-il être comprimé au coude ?", reponses: ["Canal cubital","Arcade du soléaire","Arcade de Struthers ou pronateur rond","Tunnel radial"], bonne_reponse: 2, explication: "Le nerf médian peut être comprimé par l'arcade de Struthers ou dans le tunnel du pronateur rond." },
+          { id: "ne_ms_co_10", question: "Quel nerf innerve le brachioradial et passe en avant du coude ?", reponses: ["Nerf ulnaire","Nerf médian","Nerf radial","Nerf musculo-cutané"], bonne_reponse: 2, explication: "Le nerf radial innerve le brachio-radial et passe devant le coude." }
+        ]}},
+        main_poignet: { label: "Main / Poignet", niveaux: { 1: [
+          { id: "ne_ms_mp_01", question: "Quel nerf passe dans le canal carpien ?", reponses: ["Nerf ulnaire","Nerf radial","Nerf médian","Nerf interosseux"], bonne_reponse: 2, explication: "Le nerf médian passe dans le canal carpien avec les 9 tendons fléchisseurs." },
+          { id: "ne_ms_mp_02", question: "Quels doigts sont concernés par le syndrome du canal carpien ?", reponses: ["4e et 5e doigts","1er, 2e et 3e doigts (et demi)","Tous les doigts","2e et 3e doigts uniquement"], bonne_reponse: 1, explication: "Le syndrome du canal carpien provoque des paresthésies des 3 premiers doigts." },
+          { id: "ne_ms_mp_03", question: "Quel nerf passe dans le canal de Guyon ?", reponses: ["Nerf médian","Nerf radial","Nerf ulnaire","Nerf interosseux"], bonne_reponse: 2, explication: "Le nerf ulnaire passe dans le canal de Guyon au poignet." },
+          { id: "ne_ms_mp_04", question: "Quelle est la conséquence d'une lésion du nerf ulnaire au poignet ?", reponses: ["Main de prédicateur","Poignet tombant","Main en griffe (4e et 5e doigts)","Perte de la supination"], bonne_reponse: 2, explication: "La lésion du nerf ulnaire au poignet donne une main en griffe des 4e et 5e doigts." },
+          { id: "ne_ms_mp_05", question: "Quel test évalue l'insuffisance du nerf ulnaire à la main ?", reponses: ["Test de Phalen","Test de Tinel","Signe de Froment","Test de Finkelstein"], bonne_reponse: 2, explication: "Le signe de Froment évalue la paralysie de l'adducteur du pouce (nerf ulnaire)." },
+          { id: "ne_ms_mp_06", question: "Quel signe clinique est évocateur du syndrome du canal carpien ?", reponses: ["Signe de Froment","Signe de Tinel au poignet","Signe de Finkelstein","Signe de Phalen"], bonne_reponse: 3, explication: "Le signe de Phalen et le signe de Tinel sont évocateurs du syndrome du canal carpien." },
+          { id: "ne_ms_mp_07", question: "Quelle racine est testée par la flexion des doigts ?", reponses: ["C6","C7","C8","T1"], bonne_reponse: 2, explication: "La racine C8 est principalement testée par la flexion des doigts." },
+          { id: "ne_ms_mp_08", question: "Quel nerf innerve les muscles intrinsèques de la main (interosseux) ?", reponses: ["Nerf médian","Nerf radial","Nerf ulnaire","Nerf interosseux antérieur"], bonne_reponse: 2, explication: "Le nerf ulnaire innerve tous les interosseux et les 2 derniers lombricaux." },
+          { id: "ne_ms_mp_09", question: "Quel est le territoire sensitif du nerf radial à la main ?", reponses: ["Bord ulnaire de la main","Paume entière","Dos de la main côté radial et premiers doigts","Tous les doigts"], bonne_reponse: 2, explication: "Le nerf radial innerve le dos de la main côté radial et les premiers doigts." },
+          { id: "ne_ms_mp_10", question: "Quel nerf réalise l'opposition du pouce ?", reponses: ["Nerf ulnaire","Nerf radial","Nerf médian","Nerf interosseux antérieur"], bonne_reponse: 2, explication: "Le nerf médian innerve l'opposant du pouce via sa branche thénarienne récurrente." }
+        ]}}
+      }},
+      membre_inf: { label: "Membre inférieur", zones: {
+        hanche_cuisse: { label: "Hanche / Cuisse", niveaux: { 1: [
+          { id: "ne_mi_ha_01", question: "Quel plexus innerve principalement la face antérieure de la cuisse ?", reponses: ["Plexus sacré","Plexus lombaire","Plexus cervical","Plexus brachial"], bonne_reponse: 1, explication: "Le plexus lombaire (L1-L4) innerve principalement la face antérieure de la cuisse." },
+          { id: "ne_mi_ha_02", question: "Quel est le nerf le plus volumineux du corps humain ?", reponses: ["Nerf fémoral","Nerf obturateur","Nerf sciatique","Nerf tibial"], bonne_reponse: 2, explication: "Le nerf sciatique est le nerf le plus volumineux du corps." },
+          { id: "ne_mi_ha_03", question: "Quel nerf peut être comprimé par le muscle piriforme ?", reponses: ["Nerf fémoral","Nerf obturateur","Nerf sciatique","Nerf glutéal supérieur"], bonne_reponse: 2, explication: "Le syndrome du piriforme est une compression du nerf sciatique par le muscle piriforme." },
+          { id: "ne_mi_ha_04", question: "Quel nerf innerve les adducteurs de la hanche ?", reponses: ["Nerf fémoral","Nerf sciatique","Nerf obturateur","Nerf glutéal inférieur"], bonne_reponse: 2, explication: "Le nerf obturateur (L2-L4) innerve les muscles adducteurs de la cuisse." },
+          { id: "ne_mi_ha_05", question: "Quel nerf innerve le grand fessier ?", reponses: ["Nerf glutéal supérieur","Nerf glutéal inférieur","Nerf sciatique","Nerf pudendal"], bonne_reponse: 1, explication: "Le nerf glutéal inférieur (L5-S2) innerve le grand fessier." },
+          { id: "ne_mi_ha_06", question: "Quelle racine est principalement testée par la flexion de la hanche ?", reponses: ["L2-L3","L4","L5","S1"], bonne_reponse: 0, explication: "Les racines L2-L3 sont principalement testées par la flexion de la hanche (psoas-iliaque)." },
+          { id: "ne_mi_ha_07", question: "Où sort le nerf sciatique du bassin ?", reponses: ["Canal obturateur","Foramen ischiatique majeur","Canal fémoral","Arcade inguinale"], bonne_reponse: 1, explication: "Le nerf sciatique sort du bassin par le foramen ischiatique majeur." },
+          { id: "ne_mi_ha_08", question: "Quelle pathologie comprime fréquemment les racines lombaires ?", reponses: ["Syndrome du piriforme","Hernie discale lombaire","Méralgie paresthésique","Canal de Guyon"], bonne_reponse: 1, explication: "La hernie discale lombaire est la cause la plus fréquente de compression radiculaire lombaire." },
+          { id: "ne_mi_ha_09", question: "Quel territoire sensitif correspond à la racine L5 ?", reponses: ["Face antérieure de la cuisse","Face postérieure de la cuisse","Bord latéral de la jambe et dos du pied","Bord latéral du pied et petit orteil"], bonne_reponse: 2, explication: "La racine L5 innerve le bord latéral de la jambe, le dos du pied et les 3 premiers orteils." },
+          { id: "ne_mi_ha_10", question: "Quel territoire sensitif correspond à la racine S1 ?", reponses: ["Face antérieure de la jambe","Dos du pied","Bord latéral du pied et petit orteil","Face médiale du pied"], bonne_reponse: 2, explication: "La racine S1 innerve le bord latéral du pied et le petit orteil." }
+        ]}},
+        genou: { label: "Genou", niveaux: { 1: [
+          { id: "ne_mi_ge_01", question: "Quel nerf innerve le quadriceps ?", reponses: ["Nerf sciatique","Nerf obturateur","Nerf fémoral","Nerf tibial"], bonne_reponse: 2, explication: "Le nerf fémoral (L2-L4) innerve le quadriceps." },
+          { id: "ne_mi_ge_02", question: "En quels nerfs se divise le nerf sciatique au creux poplité ?", reponses: ["Nerf fémoral et nerf obturateur","Nerf tibial et nerf fibulaire commun","Nerf sural et nerf plantaire","Nerf cutané et nerf moteur"], bonne_reponse: 1, explication: "Le nerf sciatique se divise en nerf tibial et nerf fibulaire commun." },
+          { id: "ne_mi_ge_03", question: "Quel nerf contourne la tête de la fibula et peut être comprimé ?", reponses: ["Nerf tibial","Nerf sural","Nerf fibulaire commun","Nerf fémoral"], bonne_reponse: 2, explication: "Le nerf fibulaire commun (SPE) contourne la tête de la fibula où il est superficiel et vulnérable." },
+          { id: "ne_mi_ge_04", question: "Quelle racine est testée par l'extension du genou ?", reponses: ["L3-L4","L5","S1","S2"], bonne_reponse: 0, explication: "Les racines L3-L4 sont testées par l'extension du genou (quadriceps)." },
+          { id: "ne_mi_ge_05", question: "Quel nerf innerve les ischio-jambiers ?", reponses: ["Nerf fémoral","Nerf obturateur","Nerf sciatique","Nerf glutéal inférieur"], bonne_reponse: 2, explication: "Le nerf sciatique innerve les ischio-jambiers." },
+          { id: "ne_mi_ge_06", question: "Quel réflexe ostéo-tendineux explore les racines L3-L4 ?", reponses: ["Réflexe achilléen","Réflexe rotulien","Réflexe médio-plantaire","Réflexe crémastérien"], bonne_reponse: 1, explication: "Le réflexe rotulien explore les racines L3-L4." },
+          { id: "ne_mi_ge_07", question: "Quel est le principal symptôme d'une lésion du nerf fibulaire commun ?", reponses: ["Paralysie des fléchisseurs plantaires","Pied tombant (steppage)","Paralysie des adducteurs","Anesthésie de la plante du pied"], bonne_reponse: 1, explication: "La lésion du nerf fibulaire commun provoque un pied tombant causant un steppage." },
+          { id: "ne_mi_ge_08", question: "Quel nerf innerve le poplité et les muscles profonds de la jambe ?", reponses: ["Nerf fibulaire commun","Nerf fibulaire profond","Nerf tibial","Nerf sural"], bonne_reponse: 2, explication: "Le nerf tibial innerve le poplité et les muscles de la loge postérieure de la jambe." },
+          { id: "ne_mi_ge_09", question: "Quelle est la cause la plus fréquente d'atteinte du nerf fibulaire commun ?", reponses: ["Hernie discale","Compression au col de la fibula","Syndrome du piriforme","Canal de Hunter"], bonne_reponse: 1, explication: "La compression du nerf fibulaire commun au col de la fibula est la cause la plus fréquente." },
+          { id: "ne_mi_ge_10", question: "Quel réflexe ostéo-tendineux explore la racine S1 ?", reponses: ["Réflexe rotulien","Réflexe achilléen","Réflexe médio-plantaire","Réflexe tibial postérieur"], bonne_reponse: 1, explication: "Le réflexe achilléen explore la racine S1 et le nerf tibial." }
+        ]}},
+        cheville_pied: { label: "Cheville / Pied", niveaux: { 1: [
+          { id: "ne_mi_ch_01", question: "Quel nerf innerve les releveurs du pied ?", reponses: ["Nerf tibial","Nerf fibulaire profond","Nerf sural","Nerf fibulaire superficiel"], bonne_reponse: 1, explication: "Le nerf fibulaire profond innerve les muscles de la loge antérieure (releveurs)." },
+          { id: "ne_mi_ch_02", question: "Quel nerf innerve les péroniers (fibulaires) latéraux ?", reponses: ["Nerf tibial","Nerf fibulaire profond","Nerf fibulaire superficiel","Nerf sural"], bonne_reponse: 2, explication: "Le nerf fibulaire superficiel innerve les muscles péroniers latéraux (éverseurs du pied)." },
+          { id: "ne_mi_ch_03", question: "Quel réflexe ostéo-tendineux explore la racine S1 ?", reponses: ["Réflexe rotulien","Réflexe achilléen","Réflexe médio-plantaire","Réflexe tibial postérieur"], bonne_reponse: 1, explication: "Le réflexe achilléen explore la racine S1 et le nerf tibial." },
+          { id: "ne_mi_ch_04", question: "Quel tunnel peut comprimer le nerf tibial à la cheville ?", reponses: ["Canal carpien","Canal tarsien","Canal fibulaire","Canal de Guyon"], bonne_reponse: 1, explication: "Le syndrome du canal tarsien est la compression du nerf tibial dans le tunnel tarsien." },
+          { id: "ne_mi_ch_05", question: "Quel nerf innerve les muscles intrinsèques du pied ?", reponses: ["Nerf fibulaire profond","Nerf fibulaire superficiel","Nerf tibial (branches plantaires)","Nerf sural"], bonne_reponse: 2, explication: "Les branches plantaires du nerf tibial innervent les muscles intrinsèques du pied." },
+          { id: "ne_mi_ch_06", question: "Quel nerf sensitif innerve le bord latéral du pied ?", reponses: ["Nerf fibulaire superficiel","Nerf fibulaire profond","Nerf sural","Nerf plantaire médial"], bonne_reponse: 2, explication: "Le nerf sural innerve le bord latéral du pied et le petit orteil." },
+          { id: "ne_mi_ch_07", question: "Quelle pathologie est liée à une compression du nerf interdigital ?", reponses: ["Syndrome de Morton","Syndrome du canal tarsien","Fasciite plantaire","Maladie de Sever"], bonne_reponse: 0, explication: "Le névrome de Morton est une fibrose du nerf interdigital entre le 3e et 4e métatarse." },
+          { id: "ne_mi_ch_08", question: "Quel est le territoire sensitif du nerf fibulaire profond ?", reponses: ["Bord latéral du pied","Dos du pied entier","1er espace interdigital du dos du pied","Plante du pied"], bonne_reponse: 2, explication: "Le nerf fibulaire profond innerve uniquement le 1er espace interdigital sur le dos du pied." },
+          { id: "ne_mi_ch_09", question: "Quel nerf peut être lésé lors d'une entorse grave de la cheville ?", reponses: ["Nerf tibial","Nerf fibulaire superficiel","Nerf sural","Nerf fibulaire profond"], bonne_reponse: 1, explication: "Le nerf fibulaire superficiel peut être lésé lors d'une entorse grave en inversion." },
+          { id: "ne_mi_ch_10", question: "Quelle racine innerve principalement la plante du pied ?", reponses: ["L4","L5","S1","S2"], bonne_reponse: 2, explication: "La racine S1 innerve la plante du pied et le bord latéral." }
+        ]}}
+      }},
+      tronc: { label: "Tronc", niveaux: { 1: [
+        { id: "ne_tr_01", question: "Quel nerf innerve le diaphragme ?", reponses: ["Nerf vague","Nerf phrénique","Nerfs intercostaux","Nerf grand splanchnique"], bonne_reponse: 1, explication: "Le nerf phrénique (C3-C4-C5) innerve le diaphragme." },
+        { id: "ne_tr_02", question: "Quel est le trajet des nerfs intercostaux ?", reponses: ["Au-dessus de chaque côte","En dessous du bord inférieur de chaque côte","Au milieu de l'espace intercostal","Entre le muscle et le périoste"], bonne_reponse: 1, explication: "Les nerfs intercostaux cheminent dans le sillon sous-costal." },
+        { id: "ne_tr_03", question: "Quelle racine correspond au nombril (ombilic) ?", reponses: ["T8","T10","T12","L1"], bonne_reponse: 1, explication: "Le dermatome T10 correspond au niveau de l'ombilic." },
+        { id: "ne_tr_04", question: "Quel dermatome correspond au mamelon ?", reponses: ["T4","T6","T8","T10"], bonne_reponse: 0, explication: "Le dermatome T4 correspond au niveau des mamelons." },
+        { id: "ne_tr_05", question: "Quelle racine innerve la région inguinale ?", reponses: ["T12","L1","L2","L3"], bonne_reponse: 1, explication: "La région inguinale est principalement innervée par L1 (nerf ilio-inguinal)." },
+        { id: "ne_tr_06", question: "Quel nerf peut être comprimé lors d'une hernie inguinale ?", reponses: ["Nerf fémoral","Nerf obturateur","Nerf ilio-inguinal","Nerf sciatique"], bonne_reponse: 2, explication: "Le nerf ilio-inguinal peut être comprimé lors d'une hernie inguinale." },
+        { id: "ne_tr_07", question: "Quel nerf peut être atteint dans le zona intercostal ?", reponses: ["Nerf phrénique","Nerf vague","Nerf intercostal","Nerf grand splanchnique"], bonne_reponse: 2, explication: "Le zona intercostal est une réactivation du virus varicelle-zona dans le ganglion spinal d'un nerf intercostal." },
+        { id: "ne_tr_08", question: "Quelle région médullaire donne les fibres sympathiques pour le thorax ?", reponses: ["C1-C4","T1-T12","L1-L5","S1-S5"], bonne_reponse: 1, explication: "Les fibres sympathiques pour le thorax émergent de la moelle thoracique (T1-T12)." },
+        { id: "ne_tr_09", question: "Quel est le rôle du système nerveux autonome ?", reponses: ["Contrôler les muscles squelettiques","Réguler les fonctions involontaires","Transmettre la douleur uniquement","Coordonner les mouvements fins"], bonne_reponse: 1, explication: "Le système nerveux autonome régule les fonctions viscérales involontaires." },
+        { id: "ne_tr_10", question: "Combien de paires de nerfs rachidiens innervent le tronc ?", reponses: ["8 paires cervicales","12 paires thoraciques","5 paires lombaires","Les 3 niveaux combinés"], bonne_reponse: 3, explication: "Le tronc est innervé par les nerfs thoraciques, cervicaux et lombaires combinés." }
+      ]}}
     }
   },
-
   arthrologie: {
-    label: "Arthrologie",
-    emoji: "🦵",
-    description: "Étude des articulations",
-    niveaux: {
-      1: [
-        {
-          id: "ar_1_01",
-          question: "Comment appelle-t-on une articulation qui ne permet aucun mouvement ?",
-          reponses: ["Une diarthrose", "Une amphiarthrose", "Une synarthrose", "Une énarthrose"],
-          bonne_reponse: 2,
-          explication: "Une synarthrose (ou articulation fibreuse) est une articulation immobile. Exemple : les sutures du crâne. Les diarthroses sont mobiles et les amphiarthroses sont semi-mobiles."
-        },
-        {
-          id: "ar_1_02",
-          question: "Quel liquide lubrifie les articulations synoviales ?",
-          reponses: ["Le plasma sanguin", "Le liquide synovial", "Le liquide cérébrospinal", "La lymphe"],
-          bonne_reponse: 1,
-          explication: "Le liquide synovial est produit par la membrane synoviale. Il lubrifie l'articulation, nourrit le cartilage articulaire et absorbe les chocs."
-        },
-        {
-          id: "ar_1_03",
-          question: "Quelle est la structure qui recouvre les surfaces articulaires des os ?",
-          reponses: ["Le périoste", "Le ménisque", "Le cartilage hyalin", "La bourse séreuse"],
-          bonne_reponse: 2,
-          explication: "Le cartilage hyalin recouvre les surfaces articulaires. Il est lisse, avasculaire et permet de réduire les frottements et d'absorber les contraintes mécaniques."
-        },
-        {
-          id: "ar_1_04",
-          question: "Comment appelle-t-on l'articulation de l'épaule ?",
-          reponses: ["Une ginglyme", "Une énarthrose", "Une trochoïde", "Une condylarthrose"],
-          bonne_reponse: 1,
-          explication: "L'articulation de l'épaule est une énarthrose (articulation sphéroïde). La tête humérale s'articule avec la glène de la scapula, permettant des mouvements dans tous les plans."
-        },
-        {
-          id: "ar_1_05",
-          question: "Quel est le rôle des ménisques du genou ?",
-          reponses: [
-            "Produire du liquide synovial",
-            "Relier le fémur au tibia",
-            "Améliorer la congruence articulaire et absorber les chocs",
-            "Stabiliser la patella"
-          ],
-          bonne_reponse: 2,
-          explication: "Les ménisques médial et latéral améliorent la congruence entre le fémur et le tibia, absorbent les chocs, distribuent les charges et stabilisent l'articulation."
-        },
-        {
-          id: "ar_1_06",
-          question: "Quelle articulation est une trochoïde (pivot) ?",
-          reponses: [
-            "L'articulation du coude (huméro-ulnaire)",
-            "L'articulation radio-ulnaire proximale",
-            "L'articulation de la hanche",
-            "L'articulation métacarpo-phalangienne"
-          ],
-          bonne_reponse: 1,
-          explication: "L'articulation radio-ulnaire proximale est une trochoïde (pivot). Elle permet la rotation de la tête radiale autour de l'ulna, permettant la prono-supination de l'avant-bras."
-        },
-        {
-          id: "ar_1_07",
-          question: "Qu'est-ce qu'une bourse séreuse ?",
-          reponses: [
-            "Un type d'articulation cartilagineux",
-            "Une poche remplie de liquide réduisant les frictions",
-            "Un renforcement capsulaire",
-            "Un type de cartilage articulaire"
-          ],
-          bonne_reponse: 1,
-          explication: "Une bourse séreuse est une poche remplie de liquide synovial qui réduit les frictions entre les tendons, muscles et os. Son inflammation s'appelle une bursite."
-        },
-        {
-          id: "ar_1_08",
-          question: "Comment appelle-t-on les ligaments qui croisent à l'intérieur du genou ?",
-          reponses: [
-            "Les ligaments collatéraux",
-            "Les ligaments ménisco-fémoraux",
-            "Les ligaments croisés",
-            "Les ligaments patellaires"
-          ],
-          bonne_reponse: 2,
-          explication: "Les ligaments croisés antérieur (LCA) et postérieur (LCP) sont situés à l'intérieur de la capsule du genou. Ils contrôlent les translations antéro-postérieures du tibia."
-        },
-        {
-          id: "ar_1_09",
-          question: "Quel mouvement est réalisé quand on rapproche un membre de l'axe du corps ?",
-          reponses: ["L'abduction", "La flexion", "L'adduction", "La rotation"],
-          bonne_reponse: 2,
-          explication: "L'adduction est le mouvement qui rapproche un segment du plan médian du corps. L'abduction est le mouvement inverse qui l'en éloigne."
-        },
-        {
-          id: "ar_1_10",
-          question: "Quelle est la caractéristique principale d'une articulation synoviale ?",
-          reponses: [
-            "Elle est totalement immobile",
-            "Elle contient une cavité articulaire remplie de liquide synovial",
-            "Elle est uniquement reliée par du cartilage",
-            "Elle ne possède pas de capsule articulaire"
-          ],
-          bonne_reponse: 1,
-          explication: "Une articulation synoviale (diarthrose) possède une cavité articulaire contenant du liquide synovial, une capsule articulaire et des surfaces recouvertes de cartilage hyalin."
-        }
-      ]
+    label: "Arthrologie", emoji: "🦵", description: "Étude des articulations",
+    regions: {
+      membre_sup: { label: "Membre supérieur", zones: {
+        epaule: { label: "Épaule", niveaux: { 1: [
+          { id: "ar_ms_ep_01", question: "Quel type d'articulation est l'articulation gléno-humérale ?", reponses: ["Ginglyme","Trochoïde","Énarthrose","Condylarthrose"], bonne_reponse: 2, explication: "L'articulation gléno-humérale est une énarthrose permettant des mouvements dans les 3 plans." },
+          { id: "ar_ms_ep_02", question: "Quel est le principal ligament stabilisateur de l'épaule ?", reponses: ["Ligament coraco-huméral","Ligament gléno-huméral supérieur","Ligament gléno-huméral inférieur","Ligament acromio-claviculaire"], bonne_reponse: 2, explication: "Le ligament gléno-huméral inférieur est le principal stabilisateur statique de l'épaule." },
+          { id: "ar_ms_ep_03", question: "Quelle est l'amplitude normale de l'abduction de l'épaule ?", reponses: ["90°","120°","160-180°","200°"], bonne_reponse: 2, explication: "L'abduction complète de l'épaule atteint 160-180°." },
+          { id: "ar_ms_ep_04", question: "Qu'est-ce que le labrum glénoïdal ?", reponses: ["Un os supplémentaire","Un bourrelet fibrocartilagineux qui approfondit la glène","Un ligament de l'épaule","Un ménisque de l'épaule"], bonne_reponse: 1, explication: "Le labrum est un bourrelet fibrocartilagineux qui approfondit la cavité glénoïde." },
+          { id: "ar_ms_ep_05", question: "Quelle est la direction la plus fréquente des luxations de l'épaule ?", reponses: ["Postérieure","Supérieure","Antérieure et inférieure","Latérale"], bonne_reponse: 2, explication: "Les luxations antéro-inférieures représentent 95% des luxations de l'épaule." },
+          { id: "ar_ms_ep_06", question: "Quel est le rôle de la bourse sous-acromiale ?", reponses: ["Produire de la synovie articulaire","Réduire les frictions entre le sus-épineux et l'acromion","Relier la scapula à l'humérus","Stabiliser la tête humérale"], bonne_reponse: 1, explication: "La bourse sous-acromiale réduit les frictions entre le sus-épineux et le plan acromio-coracoïdien." },
+          { id: "ar_ms_ep_07", question: "Qu'est-ce que la capsulite rétractile ?", reponses: ["Une fracture de l'épaule","Une rétraction douloureuse de la capsule articulaire","Une rupture du labrum","Une tendinite du biceps"], bonne_reponse: 1, explication: "La capsulite rétractile (épaule gelée) est une rétraction de la capsule causant une limitation douloureuse." },
+          { id: "ar_ms_ep_08", question: "Quelle pathologie résulte d'une calcification dans la coiffe des rotateurs ?", reponses: ["Capsulite rétractile","Tendinite calcifiante","Conflit sous-acromial","Rupture de coiffe"], bonne_reponse: 1, explication: "La tendinite calcifiante résulte du dépôt de cristaux d'hydroxyapatite dans les tendons de la coiffe." },
+          { id: "ar_ms_ep_09", question: "Quel arc osseux forme le toit de l'épaule ?", reponses: ["Arc coraco-acromio-claviculaire","Arc acromio-coracoïdien","Arc gléno-huméral","Arc acromio-huméral"], bonne_reponse: 1, explication: "L'arc coraco-acromial forme le toit de l'épaule." },
+          { id: "ar_ms_ep_10", question: "Quel mouvement combine abduction + rotation externe + flexion ?", reponses: ["Rétropulsion","Circumduction","Antépulsion","Adduction croisée"], bonne_reponse: 1, explication: "La circumduction est un mouvement combiné décrivant un cône autour de l'articulation." }
+        ]}},
+        coude: { label: "Coude", niveaux: { 1: [
+          { id: "ar_ms_co_01", question: "Quel type d'articulation est l'huméro-ulnaire ?", reponses: ["Trochoïde","Énarthrose","Ginglyme (trochléenne)","Condylarthrose"], bonne_reponse: 2, explication: "L'articulation huméro-ulnaire est un ginglyme permettant la flexion-extension." },
+          { id: "ar_ms_co_02", question: "Quelle est l'amplitude normale de flexion du coude ?", reponses: ["90°","120°","140-150°","180°"], bonne_reponse: 2, explication: "La flexion du coude atteint normalement 140-150°." },
+          { id: "ar_ms_co_03", question: "Quel ligament stabilise le coude en dedans ?", reponses: ["Ligament annulaire du radius","Ligament collatéral ulnaire","Ligament collatéral radial","Ligament carré"], bonne_reponse: 1, explication: "Le ligament collatéral ulnaire (médial) stabilise le coude contre le stress en valgus." },
+          { id: "ar_ms_co_04", question: "Quel ligament maintient la tête radiale en place ?", reponses: ["Ligament collatéral radial","Ligament collatéral ulnaire","Ligament annulaire du radius","Ligament carré"], bonne_reponse: 2, explication: "Le ligament annulaire du radius encercle la tête radiale et la maintient contre l'ulna." },
+          { id: "ar_ms_co_05", question: "Qu'est-ce que la pronation douloureuse de l'enfant ?", reponses: ["Une fracture du coude","Un déplacement de la tête radiale hors du ligament annulaire","Une entorse du coude","Une bursite olécrânienne"], bonne_reponse: 1, explication: "La pronation douloureuse est une subluxation de la tête radiale fréquente chez l'enfant de 1-5 ans." },
+          { id: "ar_ms_co_06", question: "Quelle pathologie articulaire est fréquente chez les tennismen au coude ?", reponses: ["Arthrose du coude","Épicondylite latérale (tennis elbow)","Bursite olécrânienne","Ostéochondrite"], bonne_reponse: 1, explication: "L'épicondylite latérale (tennis elbow) est une tendinopathie des épicondyliens latéraux." },
+          { id: "ar_ms_co_07", question: "Quel mouvement est réalisé par l'articulation radio-ulnaire proximale ?", reponses: ["Flexion-extension","Prono-supination","Abduction-adduction","Circumduction"], bonne_reponse: 1, explication: "L'articulation radio-ulnaire proximale est une trochoïde permettant la prono-supination." },
+          { id: "ar_ms_co_08", question: "Quel angle valgus normal présente le coude en extension ?", reponses: ["0°","5°","10-15°","20-25°"], bonne_reponse: 2, explication: "Le valgus physiologique du coude est de 10-15° chez l'homme." },
+          { id: "ar_ms_co_09", question: "Quelle est l'amplitude normale de la prono-supination ?", reponses: ["60°-60°","80°-80°","90°-90°","45°-45°"], bonne_reponse: 1, explication: "La prono-supination normale est de 80-90° dans chaque sens." },
+          { id: "ar_ms_co_10", question: "Quel espace est occupé par la bourse olécrânienne ?", reponses: ["Fosse coronoïdienne","Entre l'olécrâne et la peau","Fosse radiale","Canal cubital"], bonne_reponse: 1, explication: "La bourse olécrânienne est entre l'olécrâne et la peau. Son inflammation cause une tuméfaction à la pointe du coude." }
+        ]}},
+        main_poignet: { label: "Main / Poignet", niveaux: { 1: [
+          { id: "ar_ms_mp_01", question: "Quel type d'articulation est le poignet (radio-carpienne) ?", reponses: ["Ginglyme","Trochoïde","Condylarthrose","Énarthrose"], bonne_reponse: 2, explication: "L'articulation radio-carpienne est une condylarthrose." },
+          { id: "ar_ms_mp_02", question: "Quel type d'articulation est la trapézo-métacarpienne du pouce ?", reponses: ["Ginglyme","Énarthrose","Selle (sellar)","Trochoïde"], bonne_reponse: 2, explication: "La trapézo-métacarpienne est une articulation en selle permettant l'opposition." },
+          { id: "ar_ms_mp_03", question: "Quelle pathologie est une arthrose de la trapézo-métacarpienne ?", reponses: ["Doigt à ressaut","Rhizarthrose","Maladie de De Quervain","Syndrome du canal carpien"], bonne_reponse: 1, explication: "La rhizarthrose est l'arthrose de l'articulation trapézo-métacarpienne du pouce." },
+          { id: "ar_ms_mp_04", question: "Quel est le type d'articulation des interphalangiennes ?", reponses: ["Condylarthrose","Ginglyme (trochléenne)","Trochoïde","Énarthrose"], bonne_reponse: 1, explication: "Les articulations interphalangiennes sont des ginglymes permettant la flexion-extension." },
+          { id: "ar_ms_mp_05", question: "Qu'est-ce que le doigt à ressaut (doigt à gâchette) ?", reponses: ["Une fracture de phalange","Un blocage du tendon fléchisseur dans sa gaine","Une luxation MCP","Une entorse IPP"], bonne_reponse: 1, explication: "Le doigt à ressaut est un blocage du tendon fléchisseur dans sa gaine par un nodule tendineux." },
+          { id: "ar_ms_mp_06", question: "Quelle entorse du pouce touche le ligament collatéral ulnaire de la MCP ?", reponses: ["Entorse du poignet","Entorse du skier (gamekeeper's thumb)","Rhizarthrose","Doigt à ressaut"], bonne_reponse: 1, explication: "L'entorse du skier est la rupture du ligament collatéral ulnaire de la MCP du pouce." },
+          { id: "ar_ms_mp_07", question: "Quelle est l'amplitude normale de flexion du poignet ?", reponses: ["45°","60°","80-90°","110°"], bonne_reponse: 2, explication: "La flexion du poignet est normalement de 80-90°." },
+          { id: "ar_ms_mp_08", question: "Quel ligament stabilise le côté ulnaire du poignet ?", reponses: ["Ligament radio-carpien","Ligament ulno-carpien","Ligament scapho-lunaire","Rétinaculum des fléchisseurs"], bonne_reponse: 1, explication: "Le ligament ulno-carpien stabilise le côté ulnaire du poignet." },
+          { id: "ar_ms_mp_09", question: "Quel est le mouvement principal de la MCP du pouce ?", reponses: ["Rotation","Flexion-extension","Abduction-adduction uniquement","Opposition"], bonne_reponse: 1, explication: "L'articulation MCP du pouce permet principalement la flexion-extension." },
+          { id: "ar_ms_mp_10", question: "Quelle articulation de la main permet l'opposition du pouce ?", reponses: ["IPP du pouce","IPD du pouce","Trapézo-métacarpienne","MCP du pouce"], bonne_reponse: 2, explication: "L'opposition du pouce se réalise principalement à l'articulation trapézo-métacarpienne." }
+        ]}}
+      }},
+      membre_inf: { label: "Membre inférieur", zones: {
+        hanche_cuisse: { label: "Hanche / Cuisse", niveaux: { 1: [
+          { id: "ar_mi_ha_01", question: "Quel type d'articulation est la hanche ?", reponses: ["Ginglyme","Condylarthrose","Énarthrose","Trochoïde"], bonne_reponse: 2, explication: "La hanche est une énarthrose : la tête fémorale sphérique s'articule avec le cotyle." },
+          { id: "ar_mi_ha_02", question: "Quel est le principal ligament de la hanche ?", reponses: ["Ligament ischio-fémoral","Ligament pubo-fémoral","Ligament ilio-fémoral (de Bertin)","Ligament de la tête fémorale"], bonne_reponse: 2, explication: "Le ligament ilio-fémoral (ligament de Bertin) est le plus solide de la hanche et du corps humain." },
+          { id: "ar_mi_ha_03", question: "Quelle est l'amplitude normale de flexion de la hanche genou fléchi ?", reponses: ["90°","110°","120-130°","150°"], bonne_reponse: 2, explication: "La flexion de la hanche est de 120-130° genou fléchi." },
+          { id: "ar_mi_ha_04", question: "Qu'est-ce que la coxarthrose ?", reponses: ["Une fracture de la hanche","L'arthrose de l'articulation coxo-fémorale","Une luxation de la hanche","Une bursite trochantérienne"], bonne_reponse: 1, explication: "La coxarthrose est la dégénérescence du cartilage de l'articulation coxo-fémorale." },
+          { id: "ar_mi_ha_05", question: "Quel test évalue la raideur en flexion de la hanche ?", reponses: ["Test de Lachman","Signe de Thomas","Test de McMurray","Signe de Trendelenburg"], bonne_reponse: 1, explication: "Le signe de Thomas évalue le flessum de hanche." },
+          { id: "ar_mi_ha_06", question: "Quel signe indique une insuffisance des abducteurs de la hanche ?", reponses: ["Signe de Thomas","Signe de Trendelenburg","Signe de Lachman","Signe de McMurray"], bonne_reponse: 1, explication: "Le signe de Trendelenburg est positif quand le bassin s'abaisse du côté opposé lors de l'appui unipodal." },
+          { id: "ar_mi_ha_07", question: "Quelle luxation de hanche est la plus fréquente ?", reponses: ["Luxation antérieure","Luxation supérieure","Luxation postérieure","Luxation inférieure"], bonne_reponse: 2, explication: "La luxation postérieure représente 85-90% des luxations de hanche." },
+          { id: "ar_mi_ha_08", question: "Quelle bourse peut s'inflammer au niveau du grand trochanter ?", reponses: ["Bourse iliaque","Bourse trochantérienne","Bourse d'Achille","Bourse ischiatique"], bonne_reponse: 1, explication: "La bursite trochantérienne est l'inflammation de la bourse au niveau du grand trochanter." },
+          { id: "ar_mi_ha_09", question: "Quelle pathologie pédiatrique affecte la tête fémorale par ostéonécrose ?", reponses: ["Maladie d'Osgood-Schlatter","Maladie de Legg-Calvé-Perthes","Épiphysiolyse","Dysplasie de hanche"], bonne_reponse: 1, explication: "La maladie de Legg-Calvé-Perthes est une ostéonécrose aseptique de la tête fémorale." },
+          { id: "ar_mi_ha_10", question: "Quel est l'angle normal d'abduction de la hanche ?", reponses: ["20°","30°","45°","60°"], bonne_reponse: 2, explication: "L'abduction normale de la hanche est de 45°." }
+        ]}},
+        genou: { label: "Genou", niveaux: { 1: [
+          { id: "ar_mi_ge_01", question: "Quel ligament empêche la translation antérieure du tibia ?", reponses: ["Ligament croisé postérieur","Ligament collatéral médial","Ligament croisé antérieur","Ligament collatéral latéral"], bonne_reponse: 2, explication: "Le LCA s'oppose à la translation antérieure du tibia sous le fémur." },
+          { id: "ar_mi_ge_02", question: "Quel test clinique évalue l'intégrité du LCA ?", reponses: ["Test de McMurray","Signe de Trendelenburg","Test de Lachman","Signe de Thomas"], bonne_reponse: 2, explication: "Le test de Lachman évalue le LCA en tractant le tibia en avant genou à 30° de flexion." },
+          { id: "ar_mi_ge_03", question: "Quel ménisque est le plus souvent lésé ?", reponses: ["Ménisque latéral","Ménisque médial","Les deux également","Cela dépend du sport"], bonne_reponse: 1, explication: "Le ménisque médial est 3 fois plus souvent lésé que le latéral." },
+          { id: "ar_mi_ge_04", question: "Quel test évalue l'atteinte méniscale du genou ?", reponses: ["Test de Lachman","Test de McMurray","Signe de Trendelenburg","Test de Thomas"], bonne_reponse: 1, explication: "Le test de McMurray évalue les ménisques par rotation du tibia en flexion progressive." },
+          { id: "ar_mi_ge_05", question: "Quelle est l'amplitude normale de flexion du genou ?", reponses: ["90°","120°","135-145°","160°"], bonne_reponse: 2, explication: "La flexion normale du genou est de 135-145°." },
+          { id: "ar_mi_ge_06", question: "Quel type d'articulation est le genou ?", reponses: ["Énarthrose","Trochoïde","Condylarthrose bicondylaire","Ginglyme pur"], bonne_reponse: 2, explication: "Le genou est une condylarthrose bicondylaire. C'est l'articulation la plus complexe du corps." },
+          { id: "ar_mi_ge_07", question: "Qu'est-ce que le unhappy triad du genou ?", reponses: ["Rupture LCA + LCP + ménisque médial","Rupture LCA + LCM + ménisque médial","Rupture LCA + LCL + ménisque latéral","Fracture + luxation + entorse"], bonne_reponse: 1, explication: "La triade de O'Donoghue associe une rupture du LCA, du LCM et du ménisque médial." },
+          { id: "ar_mi_ge_08", question: "Qu'est-ce que le kyste de Baker ?", reponses: ["Un kyste osseux du fémur","Un épanchement synovial dans le creux poplité","Une bursite rotulienne","Un kyste méniscal"], bonne_reponse: 1, explication: "Le kyste de Baker est une distension de la bourse dans le creux poplité." },
+          { id: "ar_mi_ge_09", question: "Quelle arthrose du genou est la plus fréquente ?", reponses: ["Arthrose du compartiment latéral","Arthrose fémoro-patellaire","Arthrose du compartiment médial","Arthrose du creux poplité"], bonne_reponse: 2, explication: "La gonarthrose médiale (interne) est la plus fréquente." },
+          { id: "ar_mi_ge_10", question: "Où se situe la bourse de la patte d'oie ?", reponses: ["Face postérieure du genou","Face latérale du genou","Face antéro-médiale du tibia proximal","Sous la patella"], bonne_reponse: 2, explication: "La bourse de la patte d'oie se situe entre les tendons de la patte d'oie et le tibia proximal." }
+        ]}},
+        cheville_pied: { label: "Cheville / Pied", niveaux: { 1: [
+          { id: "ar_mi_ch_01", question: "Quel ligament est le plus souvent lésé lors d'une entorse de la cheville ?", reponses: ["Ligament deltoïde","Ligament talo-fibulaire postérieur","Ligament talo-fibulaire antérieur","Ligament calcanéo-fibulaire"], bonne_reponse: 2, explication: "Le ligament talo-fibulaire antérieur (LTFA) est le plus fréquemment lésé lors d'une entorse." },
+          { id: "ar_mi_ch_02", question: "Quel mouvement cause l'entorse latérale classique ?", reponses: ["Éversion et dorsiflexion","Inversion et flexion plantaire","Rotation externe forcée","Dorsiflexion pure"], bonne_reponse: 1, explication: "L'entorse latérale classique survient en inversion-flexion plantaire." },
+          { id: "ar_mi_ch_03", question: "Quel type d'articulation est la cheville (tibio-talienne) ?", reponses: ["Condylarthrose","Énarthrose","Ginglyme (trochléenne)","Trochoïde"], bonne_reponse: 2, explication: "La cheville est un ginglyme permettant la dorsiflexion et la flexion plantaire." },
+          { id: "ar_mi_ch_04", question: "Quelle est l'amplitude normale de dorsiflexion de la cheville ?", reponses: ["5°","10°","20°","30°"], bonne_reponse: 2, explication: "La dorsiflexion normale de la cheville est de 20°." },
+          { id: "ar_mi_ch_05", question: "Qu'est-ce que le pied plat valgus ?", reponses: ["Affaissement de la voûte latérale","Affaissement de la voûte interne avec valgus du talon","Élévation de la voûte plantaire","Supination du pied"], bonne_reponse: 1, explication: "Le pied plat valgus associe un affaissement de la voûte plantaire interne et un valgus du calcanéus." },
+          { id: "ar_mi_ch_06", question: "Qu'est-ce que l'hallux valgus ?", reponses: ["Flexion du gros orteil","Déviation latérale du gros orteil avec saillie médiale (oignon)","Extension du gros orteil","Rotation du gros orteil"], bonne_reponse: 1, explication: "L'hallux valgus est une déviation en valgus du gros orteil avec saillie de la tête du 1er métatarse." },
+          { id: "ar_mi_ch_07", question: "Qu'est-ce que la fasciite plantaire ?", reponses: ["Une fracture du calcanéus","Une inflammation du fascia plantaire causant une douleur au talon","Une tendinite d'Achille","Une arthrose de la cheville"], bonne_reponse: 1, explication: "La fasciite plantaire est une inflammation de l'insertion du fascia plantaire sur le calcanéus." },
+          { id: "ar_mi_ch_08", question: "Quel ligament stabilise la mortaise tibio-fibulaire ?", reponses: ["Ligament deltoïde","Ligament talo-fibulaire","Ligament tibio-fibulaire antérieur (syndesmose)","Ligament calcanéo-fibulaire"], bonne_reponse: 2, explication: "La syndesmose tibio-fibulaire maintient la mortaise." },
+          { id: "ar_mi_ch_09", question: "Quelle articulation permet l'inversion-éversion du pied ?", reponses: ["Articulation tibio-talienne","Articulation sous-talienne","Articulation de Lisfranc","Articulation tibio-fibulaire"], bonne_reponse: 1, explication: "L'articulation sous-talienne permet l'inversion et l'éversion du pied." },
+          { id: "ar_mi_ch_10", question: "Qu'est-ce que le pied creux ?", reponses: ["Voûte plantaire abaissée","Voûte plantaire exagérément élevée","Pied plat","Déformation des orteils"], bonne_reponse: 1, explication: "Le pied creux est caractérisé par une voûte plantaire exagérément élevée." }
+        ]}}
+      }},
+      tronc: { label: "Tronc", niveaux: { 1: [
+        { id: "ar_tr_01", question: "Quel type d'articulation est la symphyse pubienne ?", reponses: ["Diarthrose","Synarthrose","Amphiarthrose (symphyse)","Trochoïde"], bonne_reponse: 2, explication: "La symphyse pubienne est une amphiarthrose avec un disque fibrocartilagineux." },
+        { id: "ar_tr_02", question: "Qu'est-ce que la hernie discale ?", reponses: ["Une fracture du disque","Un déplacement du nucleus pulposus à travers l'annulus fibrosus","Une ostéophytose vertébrale","Une arthrose des facettes"], bonne_reponse: 1, explication: "La hernie discale est la protrusion du nucleus pulposus à travers l'annulus fibrosus." },
+        { id: "ar_tr_03", question: "Quelle articulation vertébrale permet la rotation entre C1 et C2 ?", reponses: ["Articulation unco-vertébrale","Articulation atlanto-axoïdienne médiane","Articulation atlanto-occipitale","Articulation zygapophysaire"], bonne_reponse: 1, explication: "L'articulation atlanto-axoïdienne médiane est une trochoïde permettant la rotation de la tête." },
+        { id: "ar_tr_04", question: "Quel segment du rachis est le plus mobile en flexion-extension ?", reponses: ["Rachis cervical","Rachis thoracique","Rachis lombaire","Jonction thoraco-lombaire"], bonne_reponse: 2, explication: "Le rachis lombaire est le plus mobile en flexion-extension." },
+        { id: "ar_tr_05", question: "Qu'est-ce que la scoliose ?", reponses: ["Une cyphose exagérée","Une lordose lombaire exagérée","Une déviation latérale du rachis avec rotation","Une fracture vertébrale"], bonne_reponse: 2, explication: "La scoliose est une déformation tridimensionnelle du rachis avec déviation latérale et rotation." },
+        { id: "ar_tr_06", question: "Qu'est-ce que le spondylolisthésis ?", reponses: ["Une fracture de l'arc postérieur","Un glissement d'une vertèbre sur celle du dessous","Une luxation disco-somatique","Une fracture tassement"], bonne_reponse: 1, explication: "Le spondylolisthésis est le glissement vers l'avant d'une vertèbre sur celle du dessous." },
+        { id: "ar_tr_07", question: "Quel ligament court sur toute la face antérieure des corps vertébraux ?", reponses: ["Ligament jaune","Ligament supra-épineux","Ligament longitudinal antérieur","Ligament inter-transversaire"], bonne_reponse: 2, explication: "Le ligament longitudinal antérieur court sur toute la face antérieure des corps vertébraux." },
+        { id: "ar_tr_08", question: "Quels ligaments relient les épineuses des vertèbres entre elles ?", reponses: ["Ligaments jaunes","Ligaments inter et supra-épineux","Ligaments intertransversaires","Ligament longitudinal antérieur"], bonne_reponse: 1, explication: "Les ligaments inter-épineux et supra-épineux relient les processus épineux." },
+        { id: "ar_tr_09", question: "Quel mouvement est principalement réalisé par le rachis cervical bas ?", reponses: ["Rotation pure","Flexion-extension","Inclinaison latérale pure","Circumduction"], bonne_reponse: 1, explication: "Le rachis cervical bas (C3-C7) réalise principalement la flexion-extension." },
+        { id: "ar_tr_10", question: "Quelle articulation relie les côtes aux vertèbres thoraciques ?", reponses: ["Articulation sterno-costale","Articulation costo-transversaire et costo-vertébrale","Articulation chondro-costale","Symphyse costale"], bonne_reponse: 1, explication: "Chaque côte s'articule avec la colonne thoracique par les articulations costo-vertébrale et costo-transversaire." }
+      ]}}
     }
   }
 }
