@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { QUESTIONS } from '../../lib/questions'
-import { createClient } from '../../lib/supabase'
+import { QUESTIONS } from '../../../lib/questions'
+import { createClient } from '../../../lib/supabase'
 
 const supabase = createClient()
 
