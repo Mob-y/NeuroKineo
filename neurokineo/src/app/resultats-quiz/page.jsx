@@ -79,9 +79,9 @@ export default function ResultatsQuizPage() {
 				</h2>
 
 				<div className="flex flex-col gap-3 mb-6">
-					{reponses.map((r) => (
+					{reponses.map((r, i) => (
 						<div
-							key={r.question.slice(0, 30)}
+							key={`reponse-${i}-${r.question.slice(0, 15)}`}
 							className={`bg-white rounded-xl border-l-4 ${r.correct ? "border-green-400" : "border-red-400"} border border-slate-200 p-4`}
 						>
 							<div className="flex items-start gap-3">
