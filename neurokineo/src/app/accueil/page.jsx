@@ -97,16 +97,17 @@ export default function AccueilPage() {
 				</button>
 			</nav>
 
-			{/* MENU BURGER OVERLAY */}
 			{menuOuvert && (
-				<button
-					type="button"
-					className="fixed inset-0 z-20 bg-transparent border-none cursor-default w-full"
-					onClick={fermerMenu}
-					onKeyDown={handleMenuKeyDown}
-					aria-label="Fermer le menu"
-				>
-					<nav className="absolute top-14 right-0 w-64 bg-white shadow-xl border-l border-slate-200 h-full">
+				<>
+					<button
+						type="button"
+						className="fixed inset-0 z-20 bg-transparent border-none cursor-default p-0 m-0"
+						onClick={fermerMenu}
+						onKeyDown={handleMenuKeyDown}
+						aria-label="Fermer le menu"
+						tabIndex={-1}
+					/>
+					<nav className="fixed top-14 right-0 w-64 bg-white shadow-xl border-l border-slate-200 h-full z-30">
 						{/* Infos utilisateur */}
 						<div className="p-5 border-b border-slate-100">
 							<p className="font-bold text-slate-800 text-base">
@@ -116,8 +117,6 @@ export default function AccueilPage() {
 								{profil?.annee} — {profil?.ecole}
 							</p>
 						</div>
-
-						{/* Liens */}
 						<div className="p-3 flex flex-col gap-1">
 							<button
 								type="button"
@@ -141,8 +140,6 @@ export default function AccueilPage() {
 								<span>✉️</span> Nous contacter
 							</button>
 						</div>
-
-						{/* Déconnexion */}
 						<div className="absolute bottom-8 left-0 right-0 px-3">
 							<button
 								type="button"
@@ -153,7 +150,7 @@ export default function AccueilPage() {
 							</button>
 						</div>
 					</nav>
-				</button>
+				</>
 			)}
 
 			{/* CONTENU PRINCIPAL */}
