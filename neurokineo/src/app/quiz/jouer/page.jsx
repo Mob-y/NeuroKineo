@@ -113,7 +113,7 @@ function QuizJouer() {
 					? QUESTIONS[chapitre].regions[region].zones[zone].label
 					: QUESTIONS[chapitre].regions[region].label;
 
-				const { data, error } = await supabase.from("historique_quiz").insert({
+				await supabase.from("historique_quiz").insert({
 					user_id: user.id,
 					matiere: QUESTIONS[chapitre].label,
 					sous_section: label,
@@ -121,10 +121,6 @@ function QuizJouer() {
 					score: scoresFinal,
 					total: questions.length,
 				});
-
-				console.log("Score final:", scoresFinal);
-				console.log("Insert data:", data);
-				console.log("Insert error:", error);
 			}
 
 			sessionStorage.setItem(

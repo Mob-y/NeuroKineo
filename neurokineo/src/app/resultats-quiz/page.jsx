@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Footer from "../../components/Footer";
 
 export default function ResultatsQuizPage() {
 	const [resultats, setResultats] = useState(null);
@@ -134,6 +135,7 @@ export default function ResultatsQuizPage() {
 					</button>
 				</div>
 			</main>
+			<Footer />
 		</div>
 	);
 }

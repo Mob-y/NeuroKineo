@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { createClient } from '../../lib/supabase'
 import { useRouter } from 'next/navigation'
+import  Footer  from "../../components/Footer";
 
 const supabase = createClient()
 
@@ -217,6 +218,7 @@ export default function ProfilPage() {
         </button>
 
       </main>
+      <Footer />
     </div>
   )
 }

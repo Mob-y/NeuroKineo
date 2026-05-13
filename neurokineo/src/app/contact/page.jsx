@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Footer from '../../components/Footer'
 
 export default function ContactPage() {
   const [nom, setNom] = useState('')
@@ -138,6 +139,7 @@ export default function ContactPage() {
         )}
 
       </main>
+      <Footer />
     </div>
   )
 }

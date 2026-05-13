@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { createClient } from "../../lib/supabase";
 import { useRouter } from "next/navigation";
+import  Footer  from "../../components/Footer";
 
 export default function LoginPage() {
 	const [isInscription, setIsInscription] = useState(false);
@@ -181,6 +182,7 @@ export default function LoginPage() {
 					</button>
 				</p>
 			</div>
+			<Footer />
 		</div>
 	);
 }

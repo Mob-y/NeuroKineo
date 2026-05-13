@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { createClient } from "../../lib/supabase";
 import { useRouter } from "next/navigation";
+import Footer from "../../components/Footer";
 
 export default function AccueilPage() {
 	const [menuOuvert, setMenuOuvert] = useState(false);
@@ -139,6 +140,14 @@ export default function AccueilPage() {
 							>
 								<span>✉️</span> Nous contacter
 							</button>
+
+							<button
+								type="button"
+								onClick={() => router.push("/mentions-legales")}
+								className="w-full text-left px-4 py-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors bg-transparent border-none cursor-pointer flex items-center gap-3"
+							>
+								<span>📋</span> Mentions légales
+							</button>
 						</div>
 						<div className="absolute bottom-8 left-0 right-0 px-3">
 							<button
@@ -212,6 +221,7 @@ export default function AccueilPage() {
 					Accéder au quiz →
 				</button>
 			</main>
+			<Footer />
 		</div>
 	);
 }

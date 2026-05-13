@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { QUESTIONS } from '../../lib/questions'
 import { useRouter } from 'next/navigation'
+import Footer from "../../components/Footer";
 
 export default function QuizPage() {
   const [etape, setEtape] = useState('chapitre')
@@ -234,6 +235,7 @@ export default function QuizPage() {
         )}
 
       </main>
+      <Footer />
     </div>
   )
 }
