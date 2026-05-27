@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { createClient } from "../../lib/supabase";
 import { useRouter } from "next/navigation";
 import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 export default function AccueilPage() {
 	const [menuOuvert, setMenuOuvert] = useState(false);
