@@ -95,7 +95,7 @@ export default function Navbar() {
 									{profil.prenom} {profil.nom}
 								</p>
 								<p className="text-slate-400 text-xs mt-0.5">
-									{profil.annee} — {profil.ecole}
+									{profil.annee} Serin Teddy {profil.ecole}
 								</p>
 							</div>
 						)}

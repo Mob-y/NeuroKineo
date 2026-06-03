@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { QUESTIONS } from '../../lib/questions'
 import { useRouter } from 'next/navigation'
 import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 export default function QuizPage() {
   const [etape, setEtape] = useState('chapitre')
@@ -19,7 +20,6 @@ export default function QuizPage() {
 
   function choisirRegion(key) {
     setRegionChoisie(key)
-    // Si tronc → pas de zone, aller directement au niveau
     if (key === 'tronc') {
       setZoneChoisie(null)
       setEtape('niveau')
@@ -59,22 +59,7 @@ export default function QuizPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
-
-      {/* NAVBAR */}
-      <nav className="bg-white border-b border-slate-200 px-4 h-14 flex items-center justify-between sticky top-0 z-10">
-        <button
-          type="button"
-          onClick={retour}
-          className="bg-transparent border-none cursor-pointer text-[#1a6b8a] font-bold text-sm flex items-center gap-2"
-        >
-          ← Retour
-        </button>
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#1a6b8a] rounded-lg flex items-center justify-center text-lg">🧠</div>
-          <span className="font-extrabold text-[#1a6b8a] text-base">NeuroKineo</span>
-        </div>
-        <div className="w-16" />
-      </nav>
+      <Navbar />
 
       <main className="flex-1 p-4 max-w-lg mx-auto w-full pt-6">
 
@@ -85,6 +70,17 @@ export default function QuizPage() {
             {region && <><span>›</span><span className="text-[#1a6b8a] font-bold">{region.label}</span></>}
             {zone && <><span>›</span><span className="text-[#1a6b8a] font-bold">{zone.label}</span></>}
           </div>
+        )}
+
+        {/* Bouton retour manuel sous le fil d'ariane */}
+        {etape !== 'chapitre' && (
+          <button
+            type="button"
+            onClick={retour}
+            className="bg-transparent border-none cursor-pointer text-[#1a6b8a] font-bold text-sm flex items-center gap-2 mb-4"
+          >
+            ← Retour
+          </button>
         )}
 
         {/* ÉTAPE 1 — Chapitre */}
